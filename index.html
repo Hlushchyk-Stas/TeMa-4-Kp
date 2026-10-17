@@ -2803,7 +2803,7 @@
               <span class="font-bold text-purple-950 block text-xs uppercase tracking-wide">Парний варіант — графічна побудова кута β (1 бал):</span>
               <p class="text-xs text-purple-900 mt-1 leading-relaxed">
                 1. Базовий катет — фронтальна проєкція <strong>p₂</strong> (відрізок [OK₂]).<br/>
-                2. З точки K₂ перпендикулярно до p₂ відкладаємо катет <strong>ΔY</strong> (глибина K₁ від осі X) → вершина <strong>K₀*</strong>.<br/>
+                2. З точки K₂ перпендикулярно до p₂ відкладаємо катет <strong>ΔY</strong> (глибина K₁ від осі X) вгору, від осі X → вершина <strong>K₀*</strong>.<br/>
                 3. Гіпотенуза <strong>OK₀* = Н.В.</strong> (дійсна довжина відрізка OK).<br/>
                 4. Шуканий кут <strong>β</strong> — кут між гіпотенузою та проєкцією p₂ (кут нахилу до П₂).
               </p>
@@ -2847,6 +2847,8 @@
 
       if (!gStep1) return;
 
+      rebuildBetaConstruction(gStep5Beta);
+
       gStep1.style.opacity = (currentStep >= 1 && chkPlane.checked) ? "1" : "0";
       gStep2.style.opacity = (currentStep >= 2 && chkPts.checked) ? "1" : "0";
       gStep3.style.opacity = (currentStep >= 3 && chkPointK.checked) ? "1" : "0";
@@ -2863,6 +2865,79 @@
       }
 
       layoutVisibleSvgLabels();
+    }
+
+    function rebuildBetaConstruction(betaGroup) {
+      if (!betaGroup || betaGroup.dataset.rebuilt === 'true') return;
+
+      const p2 = document.querySelectorAll('#step-4 line')[1];
+      const axis = document.querySelector('#layer-axis line');
+      const connector = Array.from(document.querySelectorAll('#step-3 line')).find(line =>
+        Math.abs(Number(line.getAttribute('x1')) - Number(line.getAttribute('x2'))) < 0.1
+      );
+      if (!p2 || !axis || !connector) {
+        throw new Error('Не вдалося побудувати кут β: відсутні проєкції p₂ або K₁K₂.');
+      }
+
+      const originX = Number(p2.getAttribute('x1'));
+      const originY = Number(p2.getAttribute('y1'));
+      const pointX = Number(p2.getAttribute('x2'));
+      const pointY = Number(p2.getAttribute('y2'));
+      const axisY = Number(axis.getAttribute('y1'));
+      const k1Y = Math.max(Number(connector.getAttribute('y1')), Number(connector.getAttribute('y2')));
+      const deltaY = Math.abs(k1Y - axisY);
+      const baseX = pointX - originX;
+      const baseY = pointY - originY;
+      const baseLength = Math.hypot(baseX, baseY);
+      if (![originX, originY, pointX, pointY, axisY, k1Y, deltaY, baseLength].every(Number.isFinite) ||
+          deltaY === 0 || baseLength === 0) {
+        throw new Error('Не вдалося побудувати кут β: некоректна довжина ΔY або проєкції p₂.');
+      }
+
+      let unitX = baseY / baseLength;
+      let unitY = -baseX / baseLength;
+      if (unitY > 0) {
+        unitX = -unitX;
+        unitY = -unitY;
+      }
+      const endX = pointX + unitX * deltaY;
+      const endY = pointY + unitY * deltaY;
+      const baseUnitX = -baseX / baseLength;
+      const baseUnitY = -baseY / baseLength;
+      const cornerSize = 12;
+      const format = value => value.toFixed(1);
+      const baseAngle = Math.atan2(baseY, baseX);
+      const hypotenuseAngle = Math.atan2(endY - originY, endX - originX);
+      let angleDelta = hypotenuseAngle - baseAngle;
+      while (angleDelta > Math.PI) angleDelta -= 2 * Math.PI;
+      while (angleDelta < -Math.PI) angleDelta += 2 * Math.PI;
+      const radius = 48;
+      const angleEndX = originX + Math.cos(hypotenuseAngle) * radius;
+      const angleEndY = originY + Math.sin(hypotenuseAngle) * radius;
+      const angleMid = baseAngle + angleDelta / 2;
+      const betaX = originX + Math.cos(angleMid) * 62;
+      const betaY = originY + Math.sin(angleMid) * 62;
+      const legLabelX = pointX + unitX * deltaY * 0.55 + unitX * 10;
+      const legLabelY = pointY + unitY * deltaY * 0.55 + unitY * 10;
+      const hypMidX = (originX + endX) / 2;
+      const hypMidY = (originY + endY) / 2;
+
+      betaGroup.innerHTML = `
+        <line x1="${format(pointX)}" y1="${format(pointY)}" x2="${format(endX)}" y2="${format(endY)}" stroke="#7e22ce" stroke-width="2.5"/>
+        <polyline points="${format(pointX + unitX * cornerSize)},${format(pointY + unitY * cornerSize)} ${format(pointX + unitX * cornerSize + baseUnitX * cornerSize)},${format(pointY + unitY * cornerSize + baseUnitY * cornerSize)} ${format(pointX + baseUnitX * cornerSize)},${format(pointY + baseUnitY * cornerSize)}" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
+        <circle cx="${format(endX)}" cy="${format(endY)}" r="5" fill="#7e22ce"/>
+        <rect x="${format(endX + 8)}" y="${format(endY - 25)}" width="40" height="22" class="pill-bg"/>
+        <text x="${format(endX + 28)}" y="${format(endY - 9)}" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+        <rect x="${format(legLabelX - 17)}" y="${format(legLabelY - 10)}" width="34" height="20" class="pill-bg"/>
+        <text x="${format(legLabelX)}" y="${format(legLabelY + 5)}" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+        <line x1="${format(originX)}" y1="${format(originY)}" x2="${format(endX)}" y2="${format(endY)}" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+        <rect x="${format(hypMidX - 25)}" y="${format(hypMidY - 11)}" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+        <text x="${format(hypMidX)}" y="${format(hypMidY + 5)}" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
+        <path d="M ${format(originX + Math.cos(baseAngle) * radius)} ${format(originY + Math.sin(baseAngle) * radius)} A ${radius} ${radius} 0 0 ${angleDelta > 0 ? 1 : 0} ${format(angleEndX)} ${format(angleEndY)}" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
+        <rect x="${format(betaX - 14)}" y="${format(betaY - 11)}" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+        <text x="${format(betaX)}" y="${format(betaY + 5)}" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
+      `;
+      betaGroup.dataset.rebuilt = 'true';
     }
 
     function layoutVisibleSvgLabels() {

@@ -80,13 +80,19 @@
             </div>
             <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
               <span class="font-bold text-emerald-300 block mb-1 text-sm">2. Пряма OK (1 б.)</span>
-              <span class="text-slate-200 text-xs leading-snug">Визначення довжини (Н.В.) та кута α або β методом прямокутного трикутника.</span>
+              <span class="text-slate-200 text-xs leading-snug">Визначення довжини (Н.В.) та кута α (непарні) або β (парні) методом прямокутного трикутника.</span>
             </div>
             <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
               <span class="font-bold text-sky-300 block mb-1 text-sm">Разом за роботу: 6 балів</span>
               <span class="text-slate-200 text-xs leading-snug">Повна графічна побудова на епюрі Монжа без числових вимірів.</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Catalog Bar Removed -->
+        <div class="text-xs text-slate-500 font-medium">
+          
         </div>
       </div>
 
@@ -118,7 +124,7 @@
               Сліди площини f₂ / h₁
             </h2>
             <p class="text-xs text-slate-500" id="active-variant-subtitle">
-              Шуканий кут α до горизонтальної площини П₁
+              Непарний варіант — шуканий кут α до горизонтальної площини П₁
             </p>
           </div>
         </div>
@@ -313,8 +319,8 @@
               За умовою задачі будується прямокутний трикутник на одній із площин проєкцій:
             </p>
             <ul class="list-disc pl-4 space-y-1" id="theory-summary-list">
-              <li><strong>Кут α:</strong> будується на П₁ (катет ΔZ, гіпотенуза Н.В.).</li>
-              <li><strong>Кут β:</strong> будується на П₂ (катет ΔY, гіпотенуза Н.В.).</li>
+              <li><strong>Кут α (непарні вар.):</strong> будується на П₁ (катет ΔZ, гіпотенуза Н.В.).</li>
+              <li><strong>Кут β (парні вар.):</strong> будується на П₂ (катет ΔY, гіпотенуза Н.В.).</li>
             </ul>
           </div>
 
@@ -355,7 +361,7 @@
         id: 2,
         isOdd: false,
         planeType: "Трикутник ABC",
-        description: "Трикутник ABC (B₂C₂ ∥ Ox, A₁C₁ ∥ Ox); пряма m (m₂ ∥ Ox, m₁ ∥ Ox). Шуканий кут β на П₂.",
+        description: "Трикутник ABC (B₂C₂ ∥ Ox, A₁C₁ ∥ Ox); пряма m (m₂ ∥ Ox, m₁ ∥ Ox, розташована праворуч від лінії зв'язку B₂B₁). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[2]
       },
@@ -403,7 +409,7 @@
         id: 8,
         isOdd: false,
         planeType: "Трикутник ABC",
-        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Шуканий кут β на П₂.",
+        description: "Трикутник ABC загального положення (сторона AC спадає вправо на П₂ та П₁); пряма m проходить всередині проєкцій трикутника. Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -435,7 +441,7 @@
         id: 12,
         isOdd: false,
         planeType: "Трикутник ABC",
-        description: "Площина задана трикутником ABC загального положення; пряма m загального положення (m₂ вгору-вправо, m₁ вгору-вправо). Шуканий кут β на П₂.",
+        description: "Трикутник ABC (A₂C₂ спадає до Ox, A₁C₁ піднімається до Ox); пряма m (m₂ перетинає B₂C₂, m₁ проходить праворуч поза трикутником). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -443,9 +449,17 @@
         id: 19,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h; пряма m — фронталь (m₁ ∥ Ox). Шуканий кут α на П₁.",
+        description: "Площина f ∩ h; пряма m — фронталь (m₁ ∥ Ox). Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[19]
+      },
+      13: {
+        id: 13,
+        isOdd: true,
+        planeType: "Перетин фронталі f та горизонталі h",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ полого спадає вправо вище h₂, m₁ круто піднімається вправо через h₁ і f₁). Шуканий кут α на П₁.",
+        angleType: "α",
+        b64Img: ""
       },
       14: {
         id: 14,
@@ -459,7 +473,7 @@
         id: 15,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ ∥ f₂, m₁ перетинає h₁). Шуканий кут α на П₁.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ ∥ f₂ перетинає h₂, m₁ перетинає h₁ нижче від f₁). Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -467,7 +481,7 @@
         id: 16,
         isOdd: false,
         planeType: "Сліди f₂* та h₁* (розкрив вправо)",
-        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ ∥ f₂*, m₁ ∥ h₁*). Шуканий кут β на П₂.",
+        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ ∥ f₂*, m₁ ∥ h₁*). Парний варіант — шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -475,7 +489,7 @@
         id: 17,
         isOdd: true,
         planeType: "Трикутник ABC",
-        description: "Трикутник ABC (B₂C₂ ∥ Ox, A₁C₁ ∥ Ox); пряма m (m₂ ∥ Ox, m₁ ∥ Ox). Шуканий кут α на П₁.",
+        description: "Трикутник ABC (B₂C₂ ∥ Ox, A₁C₁ ∥ Ox); пряма m (m₂ ∥ Ox, m₁ ∥ Ox, розташована праворуч від лінії зв'язку B₂B₁). Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -499,7 +513,7 @@
         id: 21,
         isOdd: true,
         planeType: "Сліди f₂* та h₁* (схід праворуч)",
-        description: "Сліди f₂* і h₁* сходяться на осі X (вершина праворуч, розкрив ліворуч); пряма m загального положення. Шуканий кут α на П₁.",
+        description: "Сліди f₂* і h₁* сходяться на осі X (вершина праворуч, розкрив ліворуч); пряма m загального положення. Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -507,7 +521,7 @@
         id: 22,
         isOdd: false,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h; пряма m (m₂ ∥ f₂ та m₁ ∥ h₁). Шуканий кут β на П₂.",
+        description: "Площина f ∩ h; пряма m (m₂ ∥ f₂ та m₁ ∥ h₁). Парний варіант — шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -515,7 +529,7 @@
         id: 23,
         isOdd: true,
         planeType: "Трикутник ABC",
-        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Шуканий кут α на П₁.",
+        description: "Трикутник ABC загального положення (сторона AC спадає вправо на П₂ та П₁); пряма m проходить всередині проєкцій трикутника. Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -523,7 +537,7 @@
         id: 24,
         isOdd: false,
         planeType: "Паралельні фронталі b ∥ c",
-        description: "Дві паралельні фронталі b ∥ c (b₁ ∥ c₁ ∥ Ox); пряма m загального положення. Шуканий кут β на П₂.",
+        description: "Дві паралельні фронталі b ∥ c (b₁ ∥ c₁ ∥ Ox); пряма m загального положення. Парний варіант — шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -531,7 +545,7 @@
         id: 25,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m — горизонталь (m₂ ∥ Ox, m₁ вгору-вправо). Шуканий кут α на П₁.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m — горизонталь (m₂ ∥ Ox, m₁ вгору-вправо). Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[25]
       },
@@ -539,7 +553,7 @@
         id: 26,
         isOdd: false,
         planeType: "Сліди f₂* та h₁* (розкрив вправо)",
-        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ вниз-вправо, m₁ вгору-вправо). Шуканий кут β на П₂.",
+        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ вниз-вправо, m₁ вгору-вправо). Парний варіант — шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[26]
       },
@@ -547,7 +561,7 @@
         id: 27,
         isOdd: true,
         planeType: "Трикутник ABC",
-        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Шуканий кут α на П₁.",
+        description: "Трикутник ABC (A₂C₂ спадає до Ox, A₁C₁ піднімається до Ox); пряма m (m₂ перетинає B₂C₂, m₁ проходить праворуч поза трикутником). Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[27]
       },
@@ -555,7 +569,7 @@
         id: 28,
         isOdd: false,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ з малим нахилом перетинає f₂, m₁ вгору-вправо). Шуканий кут β на П₂.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ полого спадає вправо вище h₂, m₁ круто піднімається вправо через h₁ і f₁). Парний варіант — шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[28]
       },
@@ -563,7 +577,7 @@
         id: 29,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h (вершина справа)",
-        description: "Площина f ∩ h (f₂ вгору-вліво, h₂ ∥ Ox вліво; f₁ ∥ Ox вліво, h₁ вниз-вліво); пряма m загального положення. Шуканий кут α на П₁.",
+        description: "Площина f ∩ h (f₂ вгору-вліво, h₂ ∥ Ox вліво; f₁ ∥ Ox вліво, h₁ вниз-вліво); пряма m загального положення. Непарний варіант — шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[29]
       },
@@ -571,7 +585,7 @@
         id: 30,
         isOdd: false,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ ∥ f₂, m₁ перетинає h₁). Шуканий кут β на П₂.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ ∥ f₂ перетинає h₂, m₁ перетинає h₁ нижче від f₁). Парний варіант — шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[30]
       }
@@ -584,12 +598,14 @@
     const maxSteps = 5;
     let autoInterval = null;
     let currentVariantMode = 'odd'; // 'odd' (alpha) or 'even' (beta)
+    let currentCatalogFilter = 'all';
 
     // DOM References
     const viewCatalog = document.getElementById('view-catalog');
     const viewSolver = document.getElementById('view-solver');
     const searchInput = document.getElementById('search-input');
     const variantsGrid = document.getElementById('variants-grid');
+    const catalogCountBadge = document.getElementById('catalog-count-badge');
     const btnNavCatalog = document.getElementById('btn-nav-catalog');
     const btnBackToCatalog = document.getElementById('btn-back-to-catalog');
     const btnHeaderHome = document.getElementById('btn-header-home');
@@ -661,15 +677,23 @@
         return `
           <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
           <line x1="160" y1="105" x2="160" y2="135" stroke="#0f172a" stroke-width="2"/>
-          <polygon points="50,95 90,30 145,30" fill="none" stroke="#0f172a" stroke-width="2.2"/>
-          <polygon points="50,145 90,210 145,145" fill="none" stroke="#0f172a" stroke-width="2.2"/>
-          <line x1="50" y1="65" x2="155" y2="65" stroke="#0f172a" stroke-width="2"/>
-          <line x1="50" y1="175" x2="155" y2="175" stroke="#0f172a" stroke-width="2"/>
+          <line x1="45" y1="95" x2="45" y2="145" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="85" y1="30" x2="85" y2="210" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="140" y1="30" x2="140" y2="145" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <polygon points="45,95 85,30 140,30" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+          <polygon points="45,145 85,210 140,145" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="92" y1="65" x2="152" y2="65" stroke="#0f172a" stroke-width="2"/>
+          <line x1="92" y1="175" x2="152" y2="175" stroke="#0f172a" stroke-width="2"/>
           <text x="165" y="124" font-size="12" font-weight="bold">O</text>
           <text x="20" y="115" font-size="11" font-weight="bold">X</text>
-          <text x="150" y="22" font-size="10" font-weight="bold">B₂C₂</text>
-          <text x="158" y="68" font-size="11" font-weight="bold">m₂</text>
-          <text x="158" y="178" font-size="11" font-weight="bold">m₁</text>
+          <text x="32" y="95" font-size="10" font-weight="bold">A₂</text>
+          <text x="80" y="23" font-size="10" font-weight="bold">B₂</text>
+          <text x="142" y="23" font-size="10" font-weight="bold">C₂</text>
+          <text x="32" y="150" font-size="10" font-weight="bold">A₁</text>
+          <text x="80" y="223" font-size="10" font-weight="bold">B₁</text>
+          <text x="143" y="148" font-size="10" font-weight="bold">C₁</text>
+          <text x="155" y="68" font-size="11" font-weight="bold">m₂</text>
+          <text x="155" y="178" font-size="11" font-weight="bold">m₁</text>
         `;
       } else if (id === 3 || id === 18) {
         return `
@@ -761,18 +785,47 @@
           <text x="165" y="124" font-size="12" font-weight="bold">O</text>
           <text x="20" y="115" font-size="11" font-weight="bold">X</text>
         `;
-      } else if (id === 8 || id === 12 || id === 23 || id === 27) {
+      } else if (id === 8 || id === 23) {
         return `
           <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
           <line x1="160" y1="105" x2="160" y2="135" stroke="#0f172a" stroke-width="2"/>
-          <polygon points="50,95 90,30 145,100" fill="none" stroke="#0f172a" stroke-width="2.2"/>
-          <polygon points="50,145 90,210 145,140" fill="none" stroke="#0f172a" stroke-width="2.2"/>
-          <line x1="70" y1="90" x2="130" y2="45" stroke="#0f172a" stroke-width="2"/>
-          <line x1="70" y1="200" x2="130" y2="155" stroke="#0f172a" stroke-width="2"/>
-          <text x="85" y="24" font-size="10" font-weight="bold">B₂</text>
-          <text x="135" y="45" font-size="11" font-weight="bold">m₂</text>
-          <text x="85" y="222" font-size="10" font-weight="bold">B₁</text>
-          <text x="135" y="155" font-size="11" font-weight="bold">m₁</text>
+          <line x1="48" y1="75" x2="48" y2="145" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="88" y1="30" x2="88" y2="210" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="132" y1="102" x2="132" y2="168" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <polygon points="48,75 88,30 132,102" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+          <polygon points="48,145 88,210 132,168" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="68" y1="88" x2="118" y2="45" stroke="#0f172a" stroke-width="2"/>
+          <line x1="72" y1="198" x2="128" y2="152" stroke="#0f172a" stroke-width="2"/>
+          <text x="34" y="75" font-size="10" font-weight="bold">A₂</text>
+          <text x="83" y="24" font-size="10" font-weight="bold">B₂</text>
+          <text x="136" y="106" font-size="10" font-weight="bold">C₂</text>
+          <text x="122" y="44" font-size="11" font-weight="bold">m₂</text>
+          <text x="34" y="148" font-size="10" font-weight="bold">A₁</text>
+          <text x="83" y="222" font-size="10" font-weight="bold">B₁</text>
+          <text x="136" y="172" font-size="10" font-weight="bold">C₁</text>
+          <text x="132" y="152" font-size="11" font-weight="bold">m₁</text>
+          <text x="165" y="124" font-size="12" font-weight="bold">O</text>
+          <text x="20" y="115" font-size="11" font-weight="bold">X</text>
+        `;
+      } else if (id === 12 || id === 27) {
+        return `
+          <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
+          <line x1="160" y1="105" x2="160" y2="135" stroke="#0f172a" stroke-width="2"/>
+          <line x1="45" y1="72" x2="45" y2="168" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="82" y1="30" x2="82" y2="210" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="125" y1="100" x2="125" y2="142" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <polygon points="45,72 82,30 125,100" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+          <polygon points="45,168 82,210 125,142" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="90" y1="72" x2="145" y2="54" stroke="#0f172a" stroke-width="2"/>
+          <line x1="95" y1="212" x2="145" y2="152" stroke="#0f172a" stroke-width="2"/>
+          <text x="31" y="72" font-size="10" font-weight="bold">A₂</text>
+          <text x="77" y="24" font-size="10" font-weight="bold">B₂</text>
+          <text x="128" y="105" font-size="10" font-weight="bold">C₂</text>
+          <text x="147" y="54" font-size="11" font-weight="bold">m₂</text>
+          <text x="31" y="172" font-size="10" font-weight="bold">A₁</text>
+          <text x="72" y="222" font-size="10" font-weight="bold">B₁</text>
+          <text x="128" y="142" font-size="10" font-weight="bold">C₁</text>
+          <text x="147" y="155" font-size="11" font-weight="bold">m₁</text>
           <text x="165" y="124" font-size="12" font-weight="bold">O</text>
           <text x="20" y="115" font-size="11" font-weight="bold">X</text>
         `;
@@ -795,7 +848,7 @@
           <text x="165" y="124" font-size="12" font-weight="bold">O</text>
           <text x="20" y="115" font-size="11" font-weight="bold">X</text>
         `;
-      } else if (id === 10 || id === 25 || id === 28) {
+      } else if (id === 10 || id === 25) {
         return `
           <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
           <line x1="160" y1="105" x2="160" y2="135" stroke="#0f172a" stroke-width="2"/>
@@ -815,7 +868,26 @@
           <text x="165" y="124" font-size="12" font-weight="bold">O</text>
           <text x="20" y="115" font-size="11" font-weight="bold">X</text>
         `;
-
+      } else if (id === 13 || id === 28) {
+        return `
+          <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
+          <line x1="160" y1="105" x2="160" y2="135" stroke="#0f172a" stroke-width="2"/>
+          <line x1="58" y1="88" x2="58" y2="152" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="58" y1="88" x2="120" y2="88" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="58" y1="88" x2="112" y2="32" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="68" y1="46" x2="128" y2="78" stroke="#0f172a" stroke-width="2"/>
+          <line x1="58" y1="152" x2="120" y2="152" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="58" y1="152" x2="112" y2="208" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="68" y1="212" x2="122" y2="124" stroke="#0f172a" stroke-width="2"/>
+          <text x="115" y="28" font-size="11" font-weight="bold">f₂</text>
+          <text x="125" y="92" font-size="11" font-weight="bold">h₂</text>
+          <text x="133" y="80" font-size="11" font-weight="bold">m₂</text>
+          <text x="125" y="156" font-size="11" font-weight="bold">f₁</text>
+          <text x="115" y="218" font-size="11" font-weight="bold">h₁</text>
+          <text x="126" y="134" font-size="11" font-weight="bold">m₁</text>
+          <text x="165" y="124" font-size="12" font-weight="bold">O</text>
+          <text x="20" y="115" font-size="11" font-weight="bold">X</text>
+        `;
       } else if (id === 14 || id === 29) {
         return `
           <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
@@ -840,19 +912,19 @@
         return `
           <line x1="160" y1="120" x2="30" y2="120" stroke="#0f172a" stroke-width="1.8"/>
           <line x1="160" y1="105" x2="160" y2="135" stroke="#0f172a" stroke-width="2"/>
-          <line x1="60" y1="85" x2="60" y2="155" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="60" y1="85" x2="60" y2="150" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2"/>
           <line x1="60" y1="85" x2="120" y2="85" stroke="#0f172a" stroke-width="2.2"/>
           <line x1="60" y1="85" x2="110" y2="35" stroke="#0f172a" stroke-width="2.2"/>
-          <line x1="85" y1="95" x2="135" y2="45" stroke="#0f172a" stroke-width="2"/>
-          <line x1="60" y1="155" x2="120" y2="155" stroke="#0f172a" stroke-width="2.2"/>
-          <line x1="60" y1="155" x2="110" y2="205" stroke="#0f172a" stroke-width="2.2"/>
-          <line x1="80" y1="205" x2="135" y2="155" stroke="#0f172a" stroke-width="2"/>
+          <line x1="78" y1="115" x2="135" y2="58" stroke="#0f172a" stroke-width="2"/>
+          <line x1="60" y1="150" x2="120" y2="150" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="60" y1="150" x2="110" y2="205" stroke="#0f172a" stroke-width="2.2"/>
+          <line x1="75" y1="210" x2="135" y2="172" stroke="#0f172a" stroke-width="2"/>
           <text x="115" y="30" font-size="11" font-weight="bold">f₂</text>
           <text x="125" y="85" font-size="11" font-weight="bold">h₂</text>
-          <text x="140" y="42" font-size="11" font-weight="bold">m₂</text>
-          <text x="125" y="155" font-size="11" font-weight="bold">f₁</text>
+          <text x="140" y="58" font-size="11" font-weight="bold">m₂</text>
+          <text x="125" y="150" font-size="11" font-weight="bold">f₁</text>
           <text x="115" y="215" font-size="11" font-weight="bold">h₁</text>
-          <text x="140" y="155" font-size="11" font-weight="bold">m₁</text>
+          <text x="140" y="175" font-size="11" font-weight="bold">m₁</text>
           <text x="165" y="124" font-size="12" font-weight="bold">O</text>
           <text x="20" y="115" font-size="11" font-weight="bold">X</text>
         `;
@@ -876,19 +948,25 @@
     }
 
     // Render Catalog Grid
-    function renderCatalog(query = '') {
+    function renderCatalog(filter = 'all', query = '') {
       if (!variantsGrid) return;
       variantsGrid.innerHTML = '';
       const q = query.trim().toLowerCase();
+      let visibleCount = 0;
 
       Object.values(variantsData).forEach(v => {
+        if (filter === 'odd' && !v.isOdd) return;
+        if (filter === 'even' && v.isOdd) return;
+
         if (q) {
           const matchId = String(v.id) === q || `варіант ${v.id}`.includes(q) || `вар ${v.id}`.includes(q);
           const matchText = v.planeType.toLowerCase().includes(q) || v.description.toLowerCase().includes(q);
+          const matchOdd = (v.isOdd && 'непарний'.includes(q)) || (!v.isOdd && 'парний'.includes(q));
           const matchAngle = (v.isOdd && (q === 'α' || q === 'альфа')) || (!v.isOdd && (q === 'β' || q === 'бета'));
-          if (!matchId && !matchText && !matchAngle) return;
+          if (!matchId && !matchText && !matchOdd && !matchAngle) return;
         }
 
+        visibleCount++;
         const card = document.createElement('div');
         card.className = "variant-card p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between";
 
@@ -932,6 +1010,9 @@
         variantsGrid.appendChild(card);
       });
 
+      if (catalogCountBadge) {
+        catalogCountBadge.textContent = visibleCount;
+      }
     }
 
     // Select Variant and prepare solver
@@ -944,7 +1025,7 @@
         v.isOdd ? 'bg-amber-100 text-amber-900' : 'bg-purple-100 text-purple-900'
       }`;
       activeTitle.textContent = `Площина: ${v.planeType}`;
-      activeSubtitle.textContent = `${v.isOdd ? 'Шуканий кут α до П₁' : 'Шуканий кут β до П₂'}`;
+      activeSubtitle.textContent = `${v.isOdd ? 'Непарний варіант — шуканий кут α до П₁' : 'Парний варіант — шуканий кут β до П₂'}`;
 
       setVariantMode(v.isOdd ? 'odd' : 'even', false);
       renderVariantSvg(v.id);
@@ -959,10 +1040,12 @@
       else if (id === 5 || id === 20) renderVariant5Svg();
       else if (id === 6 || id === 21) renderVariant6Svg();
       else if (id === 7 || id === 22) renderVariant7Svg();
-      else if (id === 8 || id === 12 || id === 23 || id === 27) renderVariant8Svg();
+      else if (id === 8 || id === 23) renderVariant8Svg();
       else if (id === 9 || id === 24) renderVariant9Svg();
-      else if (id === 10 || id === 25 || id === 28) renderVariant10Svg();
+      else if (id === 10 || id === 25) renderVariant10Svg();
       else if (id === 11 || id === 26) renderVariant11Svg();
+      else if (id === 12 || id === 27) renderVariant12Svg();
+      else if (id === 13 || id === 28) renderVariant13Svg();
       else if (id === 14 || id === 29) renderVariant14Svg();
       else if (id === 15 || id === 30) renderVariant15Svg();
       else renderVariant1Svg();
@@ -1055,7 +1138,7 @@
       `;
     }
 
-    // VARIANT 2: Triangle ABC (B2C2 || Ox, A1C1 || Ox, m horizontal)
+    // VARIANT 2 & 17: Triangle ABC (B2C2 || Ox, A1C1 || Ox, m horizontal to the right of B2B1)
     function renderVariant2Svg() {
       dynamicContent.innerHTML = `
         <g id="layer-base">
@@ -1079,11 +1162,11 @@
           <line x1="330" y1="70" x2="330" y2="520" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
           <line x1="540" y1="70" x2="540" y2="360" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
 
-          <line x1="200" y1="160" x2="620" y2="160" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="350" y1="160" x2="600" y2="160" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="615" y="150" width="34" height="24" class="pill-bg"/>
           <text x="630" y="165" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
 
-          <line x1="200" y1="400" x2="620" y2="400" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="350" y1="400" x2="600" y2="400" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="615" y="385" width="34" height="24" class="pill-bg"/>
           <text x="630" y="400" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
         </g>
@@ -1099,43 +1182,44 @@
           <circle cx="349.4" cy="160" r="5" fill="#2563eb"/>
           <rect x="362" y="120" width="26" height="20" class="pill-bg"/>
           <text x="375" y="135" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
-          <line x1="250.6" y1="160" x2="250.6" y2="440" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="250.6" y1="160" x2="250.6" y2="435.3" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
           <line x1="349.4" y1="160" x2="349.4" y2="360" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
-          <circle cx="250.6" cy="440" r="5" fill="#2563eb"/>
+          <circle cx="250.6" cy="435.3" r="5" fill="#2563eb"/>
           <rect x="222" y="450" width="26" height="20" class="pill-bg"/>
           <text x="235" y="465" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₁</text>
           <circle cx="349.4" cy="360" r="5" fill="#2563eb"/>
           <rect x="362" y="320" width="26" height="20" class="pill-bg"/>
           <text x="375" y="335" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
-          <line x1="220" y1="465" x2="380" y2="335" stroke="#2563eb" stroke-width="2.2"/>
+          <line x1="220" y1="458.6" x2="380" y2="336.7" stroke="#2563eb" stroke-width="2.2"/>
           <rect x="182" y="480" width="26" height="20" class="pill-bg"/>
           <text x="195" y="495" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
         </g>
         <g id="step-3" class="transition-all duration-500 opacity-0">
-          <circle cx="300.0" cy="400" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <line x1="296.9" y1="400" x2="350" y2="400" stroke="#0f172a" stroke-width="2" stroke-dasharray="4,3"/>
+          <circle cx="296.9" cy="400" r="7" fill="#db2777" filter="url(#glow-pink)"/>
           <rect x="272" y="355" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
           <text x="285" y="370" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
-          <line x1="300.0" y1="400" x2="300.0" y2="160" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
-          <circle cx="300.0" cy="160" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <line x1="296.9" y1="400" x2="296.9" y2="160" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
+          <circle cx="296.9" cy="160" r="7" fill="#db2777" filter="url(#glow-pink)"/>
           <rect x="272" y="190" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
           <text x="285" y="205" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
         </g>
         <g id="step-4" class="transition-all duration-500 opacity-0">
-          <line x1="680" y1="300" x2="300.0" y2="400" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="296.9" y2="400" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
           <rect x="495" y="320" width="30" height="22" class="pill-bg"/>
           <text x="510" y="335" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
-          <line x1="680" y1="300" x2="300.0" y2="160" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="296.9" y2="160" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
           <rect x="495" y="230" width="30" height="22" class="pill-bg"/>
           <text x="510" y="245" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="300.0" y1="160" x2="265.4" y2="253.8" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="265.4" cy="253.8" r="5" fill="#7e22ce"/>
+          <line x1="296.9" y1="160" x2="262.6" y2="253.9" stroke="#7e22ce" stroke-width="2.5"/>
+          <circle cx="262.6" cy="253.9" r="5" fill="#7e22ce"/>
           <rect x="210" y="260" width="30" height="22" class="pill-bg"/>
           <text x="225" y="275" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
           <rect x="210" y="200" width="34" height="20" class="pill-bg"/>
           <text x="225" y="215" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
-          <line x1="680" y1="300" x2="265.4" y2="253.8" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="262.6" y2="253.9" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="435" y="275" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
           <text x="460" y="290" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
           <path d="M 602 272 A 80 80 0 0 1 608 291" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
@@ -1143,13 +1227,13 @@
           <text x="595" y="275" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
-          <line x1="300.0" y1="400" x2="335.6" y2="535.4" stroke="#ea580c" stroke-width="2.5"/>
-          <circle cx="335.6" cy="535.4" r="5" fill="#ea580c"/>
+          <line x1="296.9" y1="400" x2="332.2" y2="535.5" stroke="#ea580c" stroke-width="2.5"/>
+          <circle cx="332.2" cy="535.5" r="5" fill="#ea580c"/>
           <rect x="350" y="540" width="28" height="22" class="pill-bg"/>
           <text x="365" y="555" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
           <rect x="270" y="465" width="34" height="20" class="pill-bg"/>
           <text x="285" y="480" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
-          <line x1="680" y1="300" x2="335.6" y2="535.4" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="332.2" y2="535.5" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="435" y="335" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
           <text x="460" y="350" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
           <path d="M 602 328 A 80 80 0 0 0 608 309" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
@@ -1239,6 +1323,126 @@
           <path d="M 618 273 A 75 75 0 0 0 627 248" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
           <rect x="600" y="250" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
           <text x="615" y="265" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
+        </g>
+      `;
+    }
+
+
+    // VARIANT 13 & 28: Intersecting f and h (m2 gently down-right above h2, m1 steeply up-right across h1 and f1)
+    function renderVariant13Svg() {
+      dynamicContent.innerHTML = `
+        <g id="layer-base">
+          <line x1="230" y1="220" x2="420" y2="75" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="422" y="55" width="28" height="24" class="pill-bg"/>
+          <text x="436" y="72" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">f₂</text>
+
+          <line x1="230" y1="220" x2="440" y2="220" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="442" y="226" width="28" height="24" class="pill-bg"/>
+          <text x="456" y="243" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">h₂</text>
+
+          <line x1="260" y1="115" x2="455" y2="205" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="462" y="182" width="32" height="24" class="pill-bg"/>
+          <text x="478" y="199" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
+
+          <line x1="230" y1="220" x2="230" y2="380" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+          <line x1="230" y1="380" x2="440" y2="380" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="445" y="368" width="28" height="24" class="pill-bg"/>
+          <text x="459" y="385" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">f₁</text>
+
+          <line x1="230" y1="380" x2="430" y2="520" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="425" y="524" width="28" height="24" class="pill-bg"/>
+          <text x="439" y="541" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">h₁</text>
+
+          <line x1="265" y1="535" x2="445" y2="310" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="450" y="305" width="32" height="24" class="pill-bg"/>
+          <text x="466" y="322" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
+        </g>
+        <g id="step-1" class="transition-all duration-500 opacity-0">
+          <line x1="210" y1="91.9" x2="515" y2="232.7" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <rect x="105" y="52" width="145" height="26" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+          <text x="115" y="70" font-size="13" font-weight="bold" fill="#1d4ed8">Σ₂ ≡ m₂ (посередник)</text>
+        </g>
+        <g id="step-2" class="transition-all duration-500 opacity-0">
+          <line x1="440" y1="220" x2="505" y2="220" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="430" y1="520" x2="500" y2="569" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <circle cx="327.1" cy="146.0" r="5" fill="#2563eb"/>
+          <rect x="300" y="112" width="26" height="20" class="pill-bg"/>
+          <text x="313" y="127" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₂</text>
+
+          <circle cx="487.5" cy="220.0" r="5" fill="#2563eb"/>
+          <rect x="498" y="205" width="26" height="20" class="pill-bg"/>
+          <text x="511" y="220" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
+
+          <line x1="327.1" y1="146.0" x2="327.1" y2="380.0" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="487.5" y1="220.0" x2="487.5" y2="560.3" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <circle cx="327.1" cy="380.0" r="5" fill="#2563eb"/>
+          <rect x="292" y="352" width="26" height="20" class="pill-bg"/>
+          <text x="305" y="367" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₁</text>
+
+          <circle cx="487.5" cy="560.3" r="5" fill="#2563eb"/>
+          <rect x="500" y="552" width="26" height="20" class="pill-bg"/>
+          <text x="513" y="567" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
+
+          <line x1="295" y1="343.9" x2="502" y2="576.5" stroke="#2563eb" stroke-width="2.2"/>
+          <rect x="255" y="332" width="26" height="20" class="pill-bg"/>
+          <text x="268" y="347" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
+        </g>
+        <g id="step-3" class="transition-all duration-500 opacity-0">
+          <circle cx="359.7" cy="416.6" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="372" y="405" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="385" y="421" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
+
+          <line x1="359.7" y1="416.6" x2="359.7" y2="161.0" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
+
+          <circle cx="359.7" cy="161.0" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="368" y="132" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="381" y="148" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
+        </g>
+        <g id="step-4" class="transition-all duration-500 opacity-0">
+          <line x1="680" y1="300" x2="359.7" y2="416.6" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="535" y="358" width="30" height="22" class="pill-bg"/>
+          <text x="550" y="373" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
+
+          <line x1="680" y1="300" x2="359.7" y2="161.0" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="535" y="210" width="30" height="22" class="pill-bg"/>
+          <text x="550" y="225" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
+        </g>
+        <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
+          <line x1="359.7" y1="416.6" x2="407.3" y2="547.3" stroke="#ea580c" stroke-width="2.5"/>
+          <circle cx="407.3" cy="547.3" r="5" fill="#ea580c"/>
+          <rect x="372" y="555" width="28" height="22" class="pill-bg"/>
+          <text x="386" y="571" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
+
+          <rect x="338" y="475" width="34" height="20" class="pill-bg"/>
+          <text x="355" y="490" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
+
+          <line x1="680" y1="300" x2="407.3" y2="547.3" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="535" y="435" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="560" y="451" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
+
+          <path d="M 610 326 A 75 75 0 0 1 625 350" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
+          <rect x="595" y="330" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="609" y="346" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
+        </g>
+        <g id="step-5-beta" class="transition-all duration-500 opacity-0">
+          <line x1="359.7" y1="161.0" x2="313.3" y2="268.0" stroke="#7e22ce" stroke-width="2.5"/>
+          <circle cx="313.3" cy="268.0" r="5" fill="#7e22ce"/>
+          <rect x="275" y="255" width="30" height="22" class="pill-bg"/>
+          <text x="290" y="271" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+
+          <rect x="295" y="198" width="34" height="20" class="pill-bg"/>
+          <text x="312" y="213" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+
+          <line x1="680" y1="300" x2="313.3" y2="268.0" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="475" y="262" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="500" y="278" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
+
+          <path d="M 605 268 A 80 80 0 0 1 615 292" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
+          <rect x="580" y="245" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="594" y="261" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
         </g>
       `;
     }
@@ -1691,120 +1895,238 @@
       `;
     }
 
-    // VARIANT 8 & 12: Triangle ABC (general m)
+    // VARIANT 8 & 23: Triangle ABC (AC slopes down-right on both P2 and P1; m inside triangle)
     function renderVariant8Svg() {
       dynamicContent.innerHTML = `
         <g id="layer-base">
-          <polygon points="200,240 350,70 540,260" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
-          <rect x="155" y="230" width="28" height="22" class="pill-bg"/>
-          <text x="169" y="245" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">A₂</text>
-          <rect x="336" y="35" width="28" height="22" class="pill-bg"/>
-          <text x="350" y="50" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">B₂</text>
-          <rect x="555" y="255" width="28" height="22" class="pill-bg"/>
-          <text x="569" y="270" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">C₂</text>
+          <polygon points="200,185 345,65 495,255" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
+          <rect x="160" y="173" width="28" height="22" class="pill-bg"/>
+          <text x="174" y="189" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">A₂</text>
+          <rect x="331" y="32" width="28" height="22" class="pill-bg"/>
+          <text x="345" y="48" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">B₂</text>
+          <rect x="505" y="248" width="28" height="22" class="pill-bg"/>
+          <text x="519" y="264" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">C₂</text>
 
-          <polygon points="200,360 350,530 540,340" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
-          <rect x="155" y="350" width="28" height="22" class="pill-bg"/>
-          <text x="169" y="365" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">A₁</text>
-          <rect x="336" y="535" width="28" height="22" class="pill-bg"/>
-          <text x="350" y="550" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">B₁</text>
-          <rect x="555" y="335" width="28" height="22" class="pill-bg"/>
-          <text x="569" y="350" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">C₁</text>
+          <polygon points="200,355 345,535 495,420" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
+          <rect x="160" y="345" width="28" height="22" class="pill-bg"/>
+          <text x="174" y="361" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">A₁</text>
+          <rect x="331" y="542" width="28" height="22" class="pill-bg"/>
+          <text x="345" y="558" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">B₁</text>
+          <rect x="505" y="412" width="28" height="22" class="pill-bg"/>
+          <text x="519" y="428" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">C₁</text>
 
-          <line x1="200" y1="240" x2="200" y2="360" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
-          <line x1="350" y1="70" x2="350" y2="530" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
-          <line x1="540" y1="260" x2="540" y2="340" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+          <line x1="200" y1="185" x2="200" y2="355" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+          <line x1="345" y1="65" x2="345" y2="535" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+          <line x1="495" y1="255" x2="495" y2="420" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
 
-          <line x1="260" y1="215" x2="480" y2="110" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="490" y="95" width="34" height="24" class="pill-bg"/>
-          <text x="507" y="112" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
+          <line x1="275" y1="210" x2="435" y2="110" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="442" y="92" width="32" height="24" class="pill-bg"/>
+          <text x="458" y="109" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
 
-          <line x1="260" y1="495" x2="480" y2="385" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="470" y="405" width="34" height="24" class="pill-bg"/>
-          <text x="487" y="422" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
+          <line x1="300" y1="505" x2="485" y2="385" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="488" y="365" width="32" height="24" class="pill-bg"/>
+          <text x="504" y="382" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
         </g>
         <g id="step-1" class="transition-all duration-500 opacity-0">
-          <line x1="180" y1="253" x2="520" y2="91" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
-          <rect x="180" y="55" width="145" height="26" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
-          <text x="180" y="73" font-size="13" font-weight="bold" fill="#1d4ed8">Σ₂ ≡ m₂ (посередник)</text>
+          <line x1="220" y1="244.4" x2="490" y2="75.6" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <rect x="130" y="55" width="145" height="26" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+          <text x="140" y="73" font-size="13" font-weight="bold" fill="#1d4ed8">Σ₂ ≡ m₂ (посередник)</text>
         </g>
         <g id="step-2" class="transition-all duration-500 opacity-0">
-          <circle cx="220.6" cy="216.7" r="5" fill="#2563eb"/>
-          <rect x="230" y="215" width="26" height="20" class="pill-bg"/>
-          <text x="243" y="230" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₂</text>
+          <circle cx="283.3" cy="204.8" r="5" fill="#2563eb"/>
+          <rect x="248" y="212" width="26" height="20" class="pill-bg"/>
+          <text x="261" y="227" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₂</text>
 
-          <circle cx="420.0" cy="132.6" r="5" fill="#2563eb"/>
-          <rect x="430" y="130" width="26" height="20" class="pill-bg"/>
-          <text x="443" y="145" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
+          <circle cx="398.5" cy="132.8" r="5" fill="#2563eb"/>
+          <rect x="405" y="135" width="26" height="20" class="pill-bg"/>
+          <text x="418" y="150" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
 
-          <line x1="220.6" y1="216.7" x2="220.6" y2="383.3" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
-          <line x1="420.0" y1="132.6" x2="420.0" y2="460.0" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="283.3" y1="204.8" x2="283.3" y2="373.4" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="398.5" y1="132.8" x2="398.5" y2="494.0" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
 
-          <circle cx="220.6" cy="383.3" r="5" fill="#2563eb"/>
-          <rect x="230" y="365" width="26" height="20" class="pill-bg"/>
-          <text x="243" y="380" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₁</text>
+          <circle cx="283.3" cy="373.4" r="5" fill="#2563eb"/>
+          <rect x="248" y="348" width="26" height="20" class="pill-bg"/>
+          <text x="261" y="363" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₁</text>
 
-          <circle cx="420.0" cy="460.0" r="5" fill="#2563eb"/>
-          <rect x="430" y="465" width="26" height="20" class="pill-bg"/>
-          <text x="443" y="480" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
+          <circle cx="398.5" cy="494.0" r="5" fill="#2563eb"/>
+          <rect x="406" y="498" width="26" height="20" class="pill-bg"/>
+          <text x="419" y="513" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
 
-          <line x1="180" y1="367.6" x2="460" y2="475.4" stroke="#2563eb" stroke-width="2.2"/>
-          <rect x="200" y="335" width="26" height="20" class="pill-bg"/>
-          <text x="213" y="350" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
+          <line x1="255" y1="343.8" x2="430" y2="527.0" stroke="#2563eb" stroke-width="2.2"/>
+          <rect x="220" y="325" width="26" height="20" class="pill-bg"/>
+          <text x="233" y="340" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
         </g>
         <g id="step-3" class="transition-all duration-500 opacity-0">
-          <circle cx="372.6" cy="438.7" r="7" fill="#db2777" filter="url(#glow-pink)"/>
-          <rect x="340" y="445" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
-          <text x="353" y="461" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
+          <circle cx="367.3" cy="461.3" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="330" y="452" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="343" y="468" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
 
-          <line x1="372.6" y1="438.7" x2="372.6" y2="161.3" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
+          <line x1="367.3" y1="461.3" x2="367.3" y2="152.3" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
 
-          <circle cx="372.6" cy="161.3" r="7" fill="#db2777" filter="url(#glow-pink)"/>
-          <rect x="340" y="175" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
-          <text x="353" y="191" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
+          <circle cx="367.3" cy="152.3" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="330" y="132" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="343" y="148" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
         </g>
         <g id="step-4" class="transition-all duration-500 opacity-0">
-          <line x1="680" y1="300" x2="372.6" y2="438.7" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-          <rect x="525" y="370" width="30" height="22" class="pill-bg"/>
-          <text x="540" y="385" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
+          <line x1="680" y1="300" x2="367.3" y2="461.3" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="530" y="375" width="30" height="22" class="pill-bg"/>
+          <text x="545" y="390" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
 
-          <line x1="680" y1="300" x2="372.6" y2="161.3" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-          <rect x="525" y="220" width="30" height="22" class="pill-bg"/>
-          <text x="540" y="235" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
+          <line x1="680" y1="300" x2="367.3" y2="152.3" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="530" y="205" width="30" height="22" class="pill-bg"/>
+          <text x="545" y="220" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="372.6" y1="161.3" x2="315.5" y2="264.4" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="315.5" cy="264.4" r="5" fill="#7e22ce"/>
-          <rect x="270" y="270" width="30" height="22" class="pill-bg"/>
-          <text x="285" y="286" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+          <line x1="367.3" y1="152.3" x2="298.5" y2="298.0" stroke="#7e22ce" stroke-width="2.5"/>
+          <circle cx="298.5" cy="298.0" r="5" fill="#7e22ce"/>
+          <rect x="260" y="272" width="30" height="22" class="pill-bg"/>
+          <text x="275" y="288" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
 
-          <rect x="295" y="215" width="34" height="20" class="pill-bg"/>
-          <text x="312" y="230" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+          <rect x="288" y="210" width="34" height="20" class="pill-bg"/>
+          <text x="305" y="225" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
 
-          <line x1="680" y1="300" x2="315.5" y2="264.4" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="470" y="275" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
-          <text x="495" y="291" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
+          <line x1="680" y1="300" x2="298.5" y2="298.0" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="465" y="272" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="490" y="288" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
 
-          <path d="M 605 272 A 80 80 0 0 1 615 292" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
-          <rect x="600" y="225" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
-          <text x="614" y="241" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
+          <path d="M 605 266 A 80 80 0 0 1 615 298" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
+          <rect x="580" y="242" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="594" y="258" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
-          <line x1="372.6" y1="438.7" x2="429.7" y2="535.6" stroke="#ea580c" stroke-width="2.5"/>
-          <circle cx="429.7" cy="535.6" r="5" fill="#ea580c"/>
-          <rect x="435" y="540" width="28" height="22" class="pill-bg"/>
-          <text x="449" y="556" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
+          <line x1="367.3" y1="461.3" x2="435.1" y2="592.5" stroke="#ea580c" stroke-width="2.5"/>
+          <circle cx="435.1" cy="592.5" r="5" fill="#ea580c"/>
+          <rect x="442" y="572" width="28" height="22" class="pill-bg"/>
+          <text x="456" y="588" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
 
-          <rect x="365" y="495" width="34" height="20" class="pill-bg"/>
-          <text x="382" y="510" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
+          <rect x="362" y="518" width="34" height="20" class="pill-bg"/>
+          <text x="379" y="533" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
 
-          <line x1="680" y1="300" x2="429.7" y2="535.6" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="530" y="420" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
-          <text x="555" y="436" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
+          <line x1="680" y1="300" x2="435.1" y2="592.5" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="535" y="445" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="560" y="461" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
 
-          <path d="M 605 328 A 80 80 0 0 0 615 308" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
-          <rect x="595" y="335" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
-          <text x="609" y="351" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
+          <path d="M 605 338 A 80 80 0 0 0 622 365" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
+          <rect x="590" y="340" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="604" y="356" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
+        </g>
+      `;
+    }
+
+    // VARIANT 12 & 27: Triangle ABC (A2C2 down-right, A1C1 up-right; m2 crosses B2C2, m1 outside right of B1C1)
+    function renderVariant12Svg() {
+      dynamicContent.innerHTML = `
+        <g id="layer-base">
+          <polygon points="190,175 325,65 485,250" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
+          <rect x="150" y="165" width="28" height="22" class="pill-bg"/>
+          <text x="164" y="181" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">A₂</text>
+          <rect x="311" y="32" width="28" height="22" class="pill-bg"/>
+          <text x="325" y="48" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">B₂</text>
+          <rect x="495" y="242" width="28" height="22" class="pill-bg"/>
+          <text x="509" y="258" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">C₂</text>
+
+          <polygon points="190,425 325,535 485,355" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
+          <rect x="150" y="415" width="28" height="22" class="pill-bg"/>
+          <text x="164" y="431" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">A₁</text>
+          <rect x="311" y="542" width="28" height="22" class="pill-bg"/>
+          <text x="325" y="558" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">B₁</text>
+          <rect x="492" y="335" width="28" height="22" class="pill-bg"/>
+          <text x="506" y="351" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">C₁</text>
+
+          <line x1="190" y1="175" x2="190" y2="425" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+          <line x1="325" y1="65" x2="325" y2="535" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+          <line x1="485" y1="250" x2="485" y2="355" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+          <line x1="350" y1="175" x2="545" y2="130" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="552" y="115" width="32" height="24" class="pill-bg"/>
+          <text x="568" y="132" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
+
+          <line x1="375" y1="540" x2="555" y2="375" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="560" y="362" width="32" height="24" class="pill-bg"/>
+          <text x="576" y="379" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
+        </g>
+        <g id="step-1" class="transition-all duration-500 opacity-0">
+          <line x1="230" y1="202.7" x2="575" y2="123.1" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <rect x="130" y="60" width="145" height="26" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+          <text x="140" y="78" font-size="13" font-weight="bold" fill="#1d4ed8">Σ₂ ≡ m₂ (посередник)</text>
+        </g>
+        <g id="step-2" class="transition-all duration-500 opacity-0">
+          <circle cx="266.1" cy="194.4" r="5" fill="#2563eb"/>
+          <rect x="242" y="205" width="26" height="20" class="pill-bg"/>
+          <text x="255" y="220" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₂</text>
+
+          <circle cx="408.5" cy="161.5" r="5" fill="#2563eb"/>
+          <rect x="392" y="130" width="26" height="20" class="pill-bg"/>
+          <text x="405" y="145" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
+
+          <line x1="266.1" y1="194.4" x2="266.1" y2="406.9" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="408.5" y1="161.5" x2="408.5" y2="441.1" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <circle cx="266.1" cy="406.9" r="5" fill="#2563eb"/>
+          <rect x="242" y="378" width="26" height="20" class="pill-bg"/>
+          <text x="255" y="393" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">M₁</text>
+
+          <circle cx="408.5" cy="441.1" r="5" fill="#2563eb"/>
+          <rect x="375" y="445" width="26" height="20" class="pill-bg"/>
+          <text x="388" y="460" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
+
+          <line x1="230" y1="398.2" x2="505" y2="464.3" stroke="#2563eb" stroke-width="2.2"/>
+          <rect x="200" y="385" width="26" height="20" class="pill-bg"/>
+          <text x="213" y="400" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
+        </g>
+        <g id="step-3" class="transition-all duration-500 opacity-0">
+          <circle cx="467.4" cy="455.3" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="445" y="470" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="458" y="486" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
+
+          <line x1="467.4" y1="455.3" x2="467.4" y2="147.9" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
+
+          <circle cx="467.4" cy="147.9" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="455" y="115" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="468" y="131" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
+        </g>
+        <g id="step-4" class="transition-all duration-500 opacity-0">
+          <line x1="680" y1="300" x2="467.4" y2="455.3" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="570" y="385" width="30" height="22" class="pill-bg"/>
+          <text x="585" y="400" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
+
+          <line x1="680" y1="300" x2="467.4" y2="147.9" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="570" y="195" width="30" height="22" class="pill-bg"/>
+          <text x="585" y="210" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
+        </g>
+        <g id="step-5-beta" class="transition-all duration-500 opacity-0">
+          <line x1="467.4" y1="147.9" x2="377.1" y2="274.1" stroke="#7e22ce" stroke-width="2.5"/>
+          <circle cx="377.1" cy="274.1" r="5" fill="#7e22ce"/>
+          <rect x="338" y="265" width="30" height="22" class="pill-bg"/>
+          <text x="353" y="281" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+
+          <rect x="385" y="195" width="34" height="20" class="pill-bg"/>
+          <text x="402" y="210" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+
+          <line x1="680" y1="300" x2="377.1" y2="274.1" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="505" y="265" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="530" y="281" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
+
+          <path d="M 615 253 A 80 80 0 0 1 620 295" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
+          <rect x="585" y="235" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="599" y="251" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
+        </g>
+        <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
+          <line x1="467.4" y1="455.3" x2="557.1" y2="578.2" stroke="#ea580c" stroke-width="2.5"/>
+          <circle cx="557.1" cy="578.2" r="5" fill="#ea580c"/>
+          <rect x="562" y="568" width="28" height="22" class="pill-bg"/>
+          <text x="576" y="584" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
+
+          <rect x="478" y="515" width="34" height="20" class="pill-bg"/>
+          <text x="495" y="530" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
+
+          <line x1="680" y1="300" x2="557.1" y2="578.2" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="605" y="445" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="630" y="461" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
+
+          <path d="M 615 347 A 80 80 0 0 0 648 372" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
+          <rect x="600" y="352" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="614" y="368" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
         </g>
       `;
     }
@@ -2239,109 +2561,109 @@
       `;
     }
 
-    // VARIANT 15: Intersecting f and h (m2 || f2, m1 crosses h1)
+    // VARIANT 15 & 30: Intersecting f and h (m2 || f2 crossing h2, m1 crossing h1 below f1)
     function renderVariant15Svg() {
       dynamicContent.innerHTML = `
         <g id="layer-base">
-          <line x1="240" y1="220" x2="420" y2="90" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="420" y="65" width="28" height="24" class="pill-bg"/>
-          <text x="434" y="82" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">f₂</text>
+          <line x1="240" y1="210" x2="410" y2="75" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="412" y="55" width="28" height="24" class="pill-bg"/>
+          <text x="426" y="72" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">f₂</text>
 
-          <line x1="240" y1="220" x2="460" y2="220" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="465" y="208" width="28" height="24" class="pill-bg"/>
-          <text x="479" y="225" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">h₂</text>
+          <line x1="240" y1="210" x2="450" y2="210" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="455" y="198" width="28" height="24" class="pill-bg"/>
+          <text x="469" y="215" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">h₂</text>
 
-          <line x1="320" y1="240" x2="480" y2="124.4" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="490" y="110" width="30" height="24" class="pill-bg"/>
-          <text x="505" y="127" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
+          <line x1="285" y1="270" x2="474" y2="120" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="480" y="105" width="30" height="24" class="pill-bg"/>
+          <text x="495" y="122" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₂</text>
 
-          <line x1="240" y1="220" x2="240" y2="380" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <line x1="240" y1="210" x2="240" y2="365" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,3"/>
 
-          <line x1="240" y1="380" x2="460" y2="380" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="455" y="345" width="28" height="24" class="pill-bg"/>
-          <text x="469" y="362" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">f₁</text>
+          <line x1="240" y1="365" x2="450" y2="365" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="455" y="352" width="28" height="24" class="pill-bg"/>
+          <text x="469" y="369" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">f₁</text>
 
-          <line x1="240" y1="380" x2="420" y2="510" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="425" y="500" width="28" height="24" class="pill-bg"/>
-          <text x="439" y="517" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">h₁</text>
+          <line x1="240" y1="365" x2="420" y2="500" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="425" y="495" width="28" height="24" class="pill-bg"/>
+          <text x="439" y="512" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">h₁</text>
 
-          <line x1="300" y1="530" x2="480" y2="370" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="490" y="385" width="30" height="24" class="pill-bg"/>
-          <text x="505" y="402" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
+          <line x1="300" y1="515" x2="490" y2="415" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="495" y="402" width="30" height="24" class="pill-bg"/>
+          <text x="510" y="419" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle">m₁</text>
         </g>
         <g id="step-1" class="transition-all duration-500 opacity-0">
-          <line x1="280" y1="269" x2="510" y2="103" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
-          <rect x="180" y="65" width="145" height="26" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
-          <text x="180" y="83" font-size="13" font-weight="bold" fill="#1d4ed8">Σ₂ ≡ m₂ (посередник)</text>
+          <line x1="265" y1="285.9" x2="505" y2="95.4" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <rect x="150" y="60" width="145" height="26" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.2"/>
+          <text x="160" y="78" font-size="13" font-weight="bold" fill="#1d4ed8">Σ₂ ≡ m₂ (посередник)</text>
         </g>
         <g id="step-2" class="transition-all duration-500 opacity-0">
-          <circle cx="347.7" cy="220" r="5" fill="#2563eb"/>
-          <rect x="335" y="185" width="26" height="20" class="pill-bg"/>
-          <text x="348" y="200" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
+          <circle cx="360.6" cy="210" r="5" fill="#2563eb"/>
+          <rect x="335" y="180" width="26" height="20" class="pill-bg"/>
+          <text x="348" y="195" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₂</text>
 
-          <line x1="347.7" y1="220" x2="347.7" y2="457.8" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <line x1="360.6" y1="210" x2="360.6" y2="455.5" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
 
-          <circle cx="347.7" cy="457.8" r="5" fill="#2563eb"/>
-          <rect x="305" y="460" width="26" height="20" class="pill-bg"/>
-          <text x="318" y="475" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
+          <circle cx="360.6" cy="455.5" r="5" fill="#2563eb"/>
+          <rect x="320" y="460" width="26" height="20" class="pill-bg"/>
+          <text x="333" y="475" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">N₁</text>
 
-          <line x1="280" y1="457.8" x2="520" y2="457.8" stroke="#2563eb" stroke-width="2.2"/>
-          <rect x="250" y="445" width="26" height="20" class="pill-bg"/>
-          <text x="263" y="460" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
+          <line x1="280" y1="455.5" x2="520" y2="455.5" stroke="#2563eb" stroke-width="2.2"/>
+          <rect x="248" y="445" width="26" height="20" class="pill-bg"/>
+          <text x="261" y="460" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">l₁</text>
         </g>
         <g id="step-3" class="transition-all duration-500 opacity-0">
-          <circle cx="381.2" cy="457.8" r="7" fill="#db2777" filter="url(#glow-pink)"/>
-          <rect x="355" y="495" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
-          <text x="368" y="511" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
+          <circle cx="413.1" cy="455.5" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="392" y="470" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="405" y="486" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₁</text>
 
-          <line x1="381.2" y1="457.8" x2="381.2" y2="195.8" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
+          <line x1="413.1" y1="455.5" x2="413.1" y2="168.3" stroke="#db2777" stroke-width="2" stroke-dasharray="4,3"/>
 
-          <circle cx="381.2" cy="195.8" r="7" fill="#db2777" filter="url(#glow-pink)"/>
-          <rect x="365" y="150" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
-          <text x="378" y="166" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
+          <circle cx="413.1" cy="168.3" r="7" fill="#db2777" filter="url(#glow-pink)"/>
+          <rect x="378" y="145" width="26" height="22" rx="4" fill="#fdf2f8" stroke="#db2777" stroke-width="1.2"/>
+          <text x="391" y="161" font-size="14" font-weight="bold" fill="#be185d" text-anchor="middle">K₂</text>
         </g>
         <g id="step-4" class="transition-all duration-500 opacity-0">
-          <line x1="680" y1="300" x2="381.2" y2="457.8" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-          <rect x="540" y="380" width="30" height="22" class="pill-bg"/>
-          <text x="555" y="395" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
+          <line x1="680" y1="300" x2="413.1" y2="455.5" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="545" y="382" width="30" height="22" class="pill-bg"/>
+          <text x="560" y="397" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₁</text>
 
-          <line x1="680" y1="300" x2="381.2" y2="195.8" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
-          <rect x="540" y="235" width="30" height="22" class="pill-bg"/>
-          <text x="555" y="250" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
+          <line x1="680" y1="300" x2="413.1" y2="168.3" stroke="#059669" stroke-width="3" stroke-linecap="round"/>
+          <rect x="545" y="212" width="30" height="22" class="pill-bg"/>
+          <text x="560" y="227" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
-          <line x1="381.2" y1="457.8" x2="430.0" y2="550.4" stroke="#ea580c" stroke-width="2.5"/>
-          <circle cx="430.0" cy="550.4" r="5" fill="#ea580c"/>
-          <rect x="435" y="555" width="28" height="22" class="pill-bg"/>
-          <text x="449" y="571" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
+          <line x1="413.1" y1="455.5" x2="479.4" y2="569.3" stroke="#ea580c" stroke-width="2.5"/>
+          <circle cx="479.4" cy="569.3" r="5" fill="#ea580c"/>
+          <rect x="485" y="562" width="28" height="22" class="pill-bg"/>
+          <text x="499" y="578" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
 
-          <rect x="390" y="545" width="34" height="20" class="pill-bg"/>
-          <text x="407" y="560" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
+          <rect x="415" y="520" width="34" height="20" class="pill-bg"/>
+          <text x="432" y="535" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
 
-          <line x1="680" y1="300" x2="430.0" y2="550.4" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="545" y="440" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
-          <text x="570" y="456" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
+          <line x1="680" y1="300" x2="479.4" y2="569.3" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="565" y="440" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="590" y="456" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
 
-          <path d="M 605 328 A 80 80 0 0 0 615 308" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
-          <rect x="600" y="335" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
-          <text x="614" y="351" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
+          <path d="M 605 335 A 80 80 0 0 0 622 360" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
+          <rect x="595" y="340" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="609" y="356" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="381.2" y1="195.8" x2="331.4" y2="76.7" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="331.4" cy="76.7" r="5" fill="#7e22ce"/>
-          <rect x="330" y="45" width="30" height="22" class="pill-bg"/>
-          <text x="345" y="61" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+          <line x1="413.1" y1="168.3" x2="344.3" y2="307.8" stroke="#7e22ce" stroke-width="2.5"/>
+          <circle cx="344.3" cy="307.8" r="5" fill="#7e22ce"/>
+          <rect x="305" y="275" width="30" height="22" class="pill-bg"/>
+          <text x="320" y="291" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
 
-          <rect x="375" y="115" width="34" height="20" class="pill-bg"/>
-          <text x="392" y="130" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+          <rect x="335" y="218" width="34" height="20" class="pill-bg"/>
+          <text x="352" y="233" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
 
-          <line x1="680" y1="300" x2="331.4" y2="76.7" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="490" y="160" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
-          <text x="515" y="176" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
+          <line x1="680" y1="300" x2="344.3" y2="307.8" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="490" y="272" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="515" y="288" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
 
-          <path d="M 605 272 A 80 80 0 0 1 615 292" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
-          <rect x="585" y="250" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
-          <text x="599" y="266" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
+          <path d="M 605 263 A 80 80 0 0 1 615 301" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
+          <rect x="580" y="245" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="594" y="261" font-size="15" font-weight="bold" fill="#4c1d95" text-anchor="middle">β</text>
         </g>
       `;
     }
@@ -2427,11 +2749,11 @@
       }
       if (mode === 'odd') {
         return {
-          title: "5. Н.В. та кут α",
+          title: "5. Н.В. та кут α (непарний варіант)",
           heading: "Крок 5: Графічна побудова кута α на П₁",
           html: `
             <div class="p-2.5 rounded bg-amber-50 border border-amber-300">
-              <span class="font-bold text-amber-950 block text-xs uppercase tracking-wide">Графічна побудова кута α (1 бал):</span>
+              <span class="font-bold text-amber-950 block text-xs uppercase tracking-wide">Непарний варіант — графічна побудова кута α (1 бал):</span>
               <p class="text-xs text-amber-900 mt-1 leading-relaxed">
                 1. Базовий катет — горизонтальна проєкція <strong>p₁</strong> (відрізок [OK₁]).<br/>
                 2. З точки K₁ перпендикулярно до p₁ відкладаємо катет <strong>ΔZ</strong> (висота K₂ над віссю X) → вершина <strong>K₀</strong>.<br/>
@@ -2443,11 +2765,11 @@
         };
       } else {
         return {
-          title: "5. Н.В. та кут β",
+          title: "5. Н.В. та кут β (парний варіант)",
           heading: "Крок 5: Графічна побудова кута β на П₂",
           html: `
             <div class="p-2.5 rounded bg-purple-50 border border-purple-300">
-              <span class="font-bold text-purple-950 block text-xs uppercase tracking-wide">Графічна побудова кута β (1 бал):</span>
+              <span class="font-bold text-purple-950 block text-xs uppercase tracking-wide">Парний варіант — графічна побудова кута β (1 бал):</span>
               <p class="text-xs text-purple-900 mt-1 leading-relaxed">
                 1. Базовий катет — фронтальна проєкція <strong>p₂</strong> (відрізок [OK₂]).<br/>
                 2. З точки K₂ перпендикулярно до p₂ відкладаємо катет <strong>ΔY</strong> (глибина K₁ від осі X) → вершина <strong>K₀*</strong>.<br/>
@@ -2580,7 +2902,7 @@
         chkAlpha.parentElement.classList.remove('hidden');
         btnStep5.textContent = "5. Н.В. і кути";
 
-        theorySummaryText.innerHTML = "Будується <strong>кут α</strong> нахилу до горизонтальної площини П₁:";
+        theorySummaryText.innerHTML = "За умовою задачі (непарні варіанти) будується <strong>кут α</strong> нахилу до горизонтальної площини П₁:";
         theorySummaryList.innerHTML = `
           <li><strong>Базовий катет:</strong> горизонтальна проєкція <span class="font-mono text-emerald-700 font-semibold">p₁</span> (відрізок [OK₁]).</li>
           <li><strong>Другий катет:</strong> перпендикуляр <span class="font-mono text-orange-700 font-semibold">ΔZ</span> (висота K₂ над віссю X) до вершини K₀.</li>
@@ -2595,7 +2917,7 @@
         chkAlpha.parentElement.classList.add('hidden');
         btnStep5.textContent = "5. Н.В. і кути";
 
-        theorySummaryText.innerHTML = "Будується <strong>кут β</strong> нахилу до фронтальної площини П₂:";
+        theorySummaryText.innerHTML = "Для парних варіантів будується <strong>кут β</strong> нахилу до фронтальної площини П₂:";
         theorySummaryList.innerHTML = `
           <li><strong>Базовий катет:</strong> фронтальна проєкція <span class="font-mono text-emerald-700 font-semibold">p₂</span> (відрізок [OK₂]).</li>
           <li><strong>Другий катет:</strong> перпендикуляр <span class="font-mono text-purple-700 font-semibold">ΔY</span> (глибина K₁ від осі X) до вершини K₀*.</li>
@@ -2614,9 +2936,12 @@
     btnBackToCatalog.addEventListener('click', () => switchView('catalog'));
     btnHeaderHome.addEventListener('click', () => switchView('catalog'));
 
+    // Catalog Filter Buttons (unified all variants)
+    currentCatalogFilter = 'all';
+
     // Search Input Event
     searchInput.addEventListener('input', (e) => {
-      renderCatalog(e.target.value);
+      renderCatalog(currentCatalogFilter, e.target.value);
     });
 
     searchInput.addEventListener('keydown', (e) => {
@@ -2711,7 +3036,7 @@
 
     // Initial load: START ON CATALOG!
     selectVariant(1);
-    renderCatalog('');
+    renderCatalog('all', '');
     switchView('catalog');
   </script>
 </body>

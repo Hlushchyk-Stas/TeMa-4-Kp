@@ -652,6 +652,7 @@
       } else {
         viewCatalog.classList.add('hidden');
         viewSolver.classList.remove('hidden');
+        updateSvgVisibility();
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
@@ -1109,6 +1110,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="443.7" y1="393.5" x2="478.4" y2="481.1" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="454.9,389.1 459.3,400.2 448.1,404.7" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="478.4" cy="481.1" r="5" fill="#ea580c"/>
           <rect x="480" y="500" width="28" height="22" class="pill-bg"/>
           <text x="495" y="515" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1123,6 +1125,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="443.7" y1="205.8" x2="478.4" y2="118.2" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="454.8,210.2 459.3,199.1 448.1,194.6" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="478.4" cy="118.2" r="5" fill="#7e22ce"/>
           <rect x="465" y="80" width="30" height="22" class="pill-bg"/>
           <text x="480" y="95" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -1214,6 +1217,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="296.9" y1="160" x2="262.6" y2="253.9" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="308.2,164.1 304.1,175.4 292.8,171.3" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="262.6" cy="253.9" r="5" fill="#7e22ce"/>
           <rect x="210" y="260" width="30" height="22" class="pill-bg"/>
           <text x="225" y="275" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -1228,6 +1232,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="296.9" y1="400" x2="332.2" y2="535.5" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="308.5,397.0 311.5,408.6 299.9,411.6" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="332.2" cy="535.5" r="5" fill="#ea580c"/>
           <rect x="350" y="540" width="28" height="22" class="pill-bg"/>
           <text x="365" y="555" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1298,6 +1303,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="446.7" y1="415.0" x2="490.8" y2="504.4" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="457.5,409.7 462.8,420.5 452.0,425.8" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="490.8" cy="504.4" r="5" fill="#ea580c"/>
           <rect x="491" y="515" width="28" height="22" class="pill-bg"/>
           <text x="505" y="530" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1312,6 +1318,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="446.7" y1="200.3" x2="490.8" y2="96.2" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="457.7,205.0 462.4,194.0 451.4,189.3" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="490.8" cy="96.2" r="5" fill="#7e22ce"/>
           <rect x="510" y="60" width="30" height="22" class="pill-bg"/>
           <text x="525" y="75" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -1412,6 +1419,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="359.7" y1="416.6" x2="407.3" y2="547.3" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="371.0,412.5 375.1,423.8 363.8,427.9" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="407.3" cy="547.3" r="5" fill="#ea580c"/>
           <rect x="372" y="555" width="28" height="22" class="pill-bg"/>
           <text x="386" y="571" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1429,6 +1437,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="359.7" y1="161.0" x2="313.3" y2="268.0" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="370.7,165.8 365.9,176.8 354.9,172.0" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="313.3" cy="268.0" r="5" fill="#7e22ce"/>
           <rect x="275" y="255" width="30" height="22" class="pill-bg"/>
           <text x="290" y="271" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -1527,15 +1536,16 @@
           <text x="540" y="263" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="374.9" y1="179.1" x2="319.6" y2="50.8" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="319.6" cy="50.8" r="5" fill="#7e22ce"/>
-          <rect x="295" y="20" width="30" height="22" class="pill-bg"/>
-          <text x="310" y="36" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+          <line x1="374.9" y1="179.1" x2="426.5" y2="48.9" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="386.1,183.5 390.5,172.4 379.3,167.9" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
+          <circle cx="426.5" cy="48.9" r="5" fill="#7e22ce"/>
+          <rect x="415" y="18" width="30" height="22" class="pill-bg"/>
+          <text x="430" y="34" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
 
-          <rect x="250" y="95" width="34" height="20" class="pill-bg"/>
-          <text x="267" y="110" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+          <rect x="360" y="95" width="34" height="20" class="pill-bg"/>
+          <text x="377" y="110" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
 
-          <line x1="680" y1="300" x2="319.6" y2="50.8" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="426.5" y2="48.9" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="445" y="125" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
           <text x="470" y="141" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
 
@@ -1545,6 +1555,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="374.9" y1="440" x2="425.4" y2="550.0" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="385.8,435.0 390.8,445.9 379.9,450.9" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="425.4" cy="550.0" r="5" fill="#ea580c"/>
           <rect x="430" y="555" width="28" height="22" class="pill-bg"/>
           <text x="444" y="571" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1644,6 +1655,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="468.4" y1="397.9" x2="543.8" y2="561.4" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="479.3,392.9 484.3,403.8 473.4,408.8" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="543.8" cy="561.4" r="5" fill="#ea580c"/>
           <rect x="548" y="555" width="28" height="22" class="pill-bg"/>
           <text x="562" y="571" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1660,15 +1672,16 @@
           <text x="632" y="376" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="468.4" y1="120.0" x2="405.0" y2="44.8" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="405.0" cy="44.8" r="5" fill="#7e22ce"/>
-          <rect x="380" y="20" width="30" height="22" class="pill-bg"/>
-          <text x="395" y="36" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+          <line x1="468.4" y1="120.0" x2="405.0" y2="194.6" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="477.5,127.8 469.8,136.9 460.6,129.1" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
+          <circle cx="405.0" cy="194.6" r="5" fill="#7e22ce"/>
+          <rect x="370" y="195" width="30" height="22" class="pill-bg"/>
+          <text x="385" y="211" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
 
-          <rect x="435" y="25" width="34" height="20" class="pill-bg"/>
-          <text x="450" y="40" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+          <rect x="405" y="140" width="34" height="20" class="pill-bg"/>
+          <text x="422" y="155" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
 
-          <line x1="680" y1="300" x2="405.0" y2="44.8" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="405.0" y2="194.6" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="520" y="160" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
           <text x="545" y="176" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
 
@@ -1753,6 +1766,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="345.6" y1="236.0" x2="329.5" y2="319.7" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="357.4,238.3 355.1,250.0 343.3,247.8" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="329.5" cy="319.7" r="5" fill="#7e22ce"/>
           <rect x="290" y="325" width="30" height="22" class="pill-bg"/>
           <text x="305" y="341" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -1770,6 +1784,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="345.6" y1="385.4" x2="361.6" y2="447.4" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="357.2,382.4 360.2,394.1 348.6,397.0" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="361.6" cy="447.4" r="5" fill="#ea580c"/>
           <rect x="375" y="475" width="28" height="22" class="pill-bg"/>
           <text x="389" y="491" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -1859,34 +1874,36 @@
           <text x="560" y="190" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
-          <line x1="515.4" y1="479.4" x2="646.6" y2="358.4" stroke="#ea580c" stroke-width="2.5"/>
-          <circle cx="646.6" cy="358.4" r="5" fill="#ea580c"/>
-          <rect x="675" y="350" width="28" height="22" class="pill-bg"/>
-          <text x="689" y="366" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
+          <line x1="515.4" y1="479.4" x2="427.0" y2="398.3" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="523.5,470.6 514.7,462.4 506.6,471.3" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
+          <circle cx="427.0" cy="398.3" r="5" fill="#ea580c"/>
+          <rect x="392" y="385" width="28" height="22" class="pill-bg"/>
+          <text x="406" y="401" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
 
-          <rect x="580" y="440" width="34" height="20" class="pill-bg"/>
-          <text x="597" y="455" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
+          <rect x="440" y="435" width="34" height="20" class="pill-bg"/>
+          <text x="457" y="450" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">ΔZ</text>
 
-          <line x1="680" y1="300" x2="646.6" y2="358.4" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="655" y="295" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
-          <text x="680" y="311" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
+          <line x1="680" y1="300" x2="427.0" y2="398.3" stroke="#b91c1c" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="520" y="340" width="50" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
+          <text x="545" y="356" font-size="13" font-weight="bold" fill="#b91c1c" text-anchor="middle">Н.В.</text>
 
           <path d="M 622 363 A 80 80 0 0 0 635 340" fill="none" stroke="#b91c1c" stroke-width="2.5"/>
           <rect x="620" y="385" width="28" height="22" rx="4" fill="#fef2f2" stroke="#b91c1c" stroke-width="1"/>
           <text x="634" y="401" font-size="15" font-weight="bold" fill="#b91c1c" text-anchor="middle">α</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="515.4" y1="120.5" x2="646.6" y2="241.5" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="646.6" cy="241.5" r="5" fill="#7e22ce"/>
-          <rect x="670" y="250" width="30" height="22" class="pill-bg"/>
-          <text x="685" y="266" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+          <line x1="515.4" y1="120.5" x2="426.9" y2="201.6" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="523.5,129.3 514.7,137.5 506.6,128.6" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
+          <circle cx="426.9" cy="201.6" r="5" fill="#7e22ce"/>
+          <rect x="390" y="195" width="30" height="22" class="pill-bg"/>
+          <text x="405" y="211" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
 
-          <rect x="580" y="160" width="34" height="20" class="pill-bg"/>
-          <text x="597" y="175" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+          <rect x="440" y="145" width="34" height="20" class="pill-bg"/>
+          <text x="457" y="160" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
 
-          <line x1="680" y1="300" x2="646.6" y2="241.5" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="620" y="260" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
-          <text x="645" y="276" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
+          <line x1="680" y1="300" x2="426.9" y2="201.6" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="520" y="240" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
+          <text x="545" y="256" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
 
           <path d="M 622 237 A 80 80 0 0 1 635 260" fill="none" stroke="#4c1d95" stroke-width="2.5"/>
           <rect x="615" y="220" width="28" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
@@ -1978,6 +1995,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="367.3" y1="152.3" x2="298.5" y2="298.0" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="378.2,157.4 373.0,168.3 362.2,163.2" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="298.5" cy="298.0" r="5" fill="#7e22ce"/>
           <rect x="260" y="272" width="30" height="22" class="pill-bg"/>
           <text x="275" y="288" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -1995,6 +2013,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="367.3" y1="461.3" x2="435.1" y2="592.5" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="378.0,455.8 383.5,466.5 372.8,472.0" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="435.1" cy="592.5" r="5" fill="#ea580c"/>
           <rect x="442" y="572" width="28" height="22" class="pill-bg"/>
           <text x="456" y="588" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2096,6 +2115,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="467.4" y1="147.9" x2="377.1" y2="274.1" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="477.2,154.9 470.2,164.6 460.4,157.7" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="377.1" cy="274.1" r="5" fill="#7e22ce"/>
           <rect x="338" y="265" width="30" height="22" class="pill-bg"/>
           <text x="353" y="281" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -2113,6 +2133,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="467.4" y1="455.3" x2="557.1" y2="578.2" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="477.1,448.2 484.2,457.9 474.5,465.0" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="557.1" cy="578.2" r="5" fill="#ea580c"/>
           <rect x="562" y="568" width="28" height="22" class="pill-bg"/>
           <text x="576" y="584" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2199,6 +2220,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="430.7" y1="423.0" x2="479.0" y2="520.8" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="441.5,417.7 446.8,428.4 436.0,433.8" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="479.0" cy="520.8" r="5" fill="#ea580c"/>
           <rect x="481" y="505" width="28" height="22" class="pill-bg"/>
           <text x="495" y="520" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2213,6 +2235,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="430.7" y1="190.9" x2="480.0" y2="78.2" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="441.7,195.7 446.5,184.7 435.5,179.9" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="480.0" cy="78.2" r="5" fill="#7e22ce"/>
           <rect x="480" y="60" width="30" height="22" class="pill-bg"/>
           <text x="495" y="75" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -2300,6 +2323,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="407.3" y1="140.0" x2="346.3" y2="244.3" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="417.7,146.1 411.6,156.4 401.2,150.4" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="346.3" cy="244.3" r="5" fill="#7e22ce"/>
           <rect x="300" y="250" width="30" height="22" class="pill-bg"/>
           <text x="315" y="266" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -2317,6 +2341,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="407.3" y1="420.8" x2="480.0" y2="563.8" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="418.3,415.9 423.7,426.6 412.7,431.5" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="480.0" cy="563.8" r="5" fill="#ea580c"/>
           <rect x="485" y="565" width="28" height="22" class="pill-bg"/>
           <text x="499" y="581" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2409,6 +2434,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="454.1" y1="374.8" x2="477.5" y2="444.9" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="465.5,371.0 469.3,382.4 457.9,386.2" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="477.5" cy="444.9" r="5" fill="#ea580c"/>
           <rect x="480" y="450" width="28" height="22" class="pill-bg"/>
           <text x="494" y="466" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2426,6 +2452,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="454.1" y1="225.9" x2="478.4" y2="152.0" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="465.5,229.6 469.3,218.2 457.8,214.5" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="478.4" cy="152.0" r="5" fill="#7e22ce"/>
           <rect x="495" y="135" width="30" height="22" class="pill-bg"/>
           <text x="510" y="151" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -2525,15 +2552,16 @@
           <text x="565" y="260" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">p₂</text>
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
-          <line x1="385.6" y1="182.8" x2="342.3" y2="73.8" stroke="#7e22ce" stroke-width="2.5"/>
-          <circle cx="342.3" cy="73.8" r="5" fill="#7e22ce"/>
-          <rect x="345" y="45" width="30" height="22" class="pill-bg"/>
-          <text x="360" y="61" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
+          <line x1="385.6" y1="182.8" x2="428.9" y2="73.9" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="396.7,187.2 401.2,176.1 390.0,171.6" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
+          <circle cx="428.9" cy="73.9" r="5" fill="#7e22ce"/>
+          <rect x="420" y="45" width="30" height="22" class="pill-bg"/>
+          <text x="435" y="61" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
 
-          <rect x="390" y="115" width="34" height="20" class="pill-bg"/>
-          <text x="407" y="130" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
+          <rect x="365" y="115" width="34" height="20" class="pill-bg"/>
+          <text x="382" y="130" font-size="12" font-weight="bold" fill="#7e22ce" text-anchor="middle">ΔY</text>
 
-          <line x1="680" y1="300" x2="342.3" y2="73.8" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="680" y1="300" x2="428.9" y2="73.9" stroke="#4c1d95" stroke-width="3.5" stroke-linecap="round"/>
           <rect x="500" y="165" width="50" height="22" rx="4" fill="#faf5ff" stroke="#4c1d95" stroke-width="1"/>
           <text x="525" y="181" font-size="13" font-weight="bold" fill="#4c1d95" text-anchor="middle">Н.В.</text>
 
@@ -2543,6 +2571,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="385.6" y1="417.2" x2="432.2" y2="524.3" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="396.7,412.8 401.5,423.8 390.4,428.2" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="432.2" cy="524.3" r="5" fill="#ea580c"/>
           <rect x="435" y="535" width="28" height="22" class="pill-bg"/>
           <text x="449" y="551" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2633,6 +2662,7 @@
         </g>
         <g id="step-5-alpha" class="transition-all duration-500 opacity-0">
           <line x1="413.1" y1="455.5" x2="479.4" y2="569.3" stroke="#ea580c" stroke-width="2.5"/>
+          <polyline points="423.5,449.5 429.5,459.8 419.1,465.9" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="479.4" cy="569.3" r="5" fill="#ea580c"/>
           <rect x="485" y="562" width="28" height="22" class="pill-bg"/>
           <text x="499" y="578" font-size="13" font-weight="bold" fill="#c2410c" text-anchor="middle">K₀</text>
@@ -2650,6 +2680,7 @@
         </g>
         <g id="step-5-beta" class="transition-all duration-500 opacity-0">
           <line x1="413.1" y1="168.3" x2="344.3" y2="307.8" stroke="#7e22ce" stroke-width="2.5"/>
+          <polyline points="423.9,173.6 418.6,184.4 407.8,179.1" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-linejoin="miter"/>
           <circle cx="344.3" cy="307.8" r="5" fill="#7e22ce"/>
           <rect x="305" y="275" width="30" height="22" class="pill-bg"/>
           <text x="320" y="291" font-size="13" font-weight="bold" fill="#6b21a8" text-anchor="middle">K₀*</text>
@@ -2830,6 +2861,186 @@
         if (gStep5Alpha) gStep5Alpha.style.opacity = "0";
         if (gStep5Beta) gStep5Beta.style.opacity = showBeta ? "1" : "0";
       }
+
+      layoutVisibleSvgLabels();
+    }
+
+    function layoutVisibleSvgLabels() {
+      const svg = document.getElementById('geo-svg');
+      const axisLayer = svg.querySelector('#layer-axis');
+      const variantLayers = Array.from(dynamicContent.children).filter(layer => layer.id);
+      const layers = [axisLayer, ...variantLayers].filter(layer =>
+        layer && Number.parseFloat(layer.style.opacity || '1') > 0
+      );
+
+      const resetTransform = element => {
+        if (!element.hasAttribute('data-original-label-transform')) {
+          const original = element.getAttribute('transform');
+          element.setAttribute('data-original-label-transform', original === null ? '__none__' : original);
+        }
+        const original = element.getAttribute('data-original-label-transform');
+        if (original !== '__none__') element.setAttribute('transform', original);
+        else element.removeAttribute('transform');
+      };
+
+      const labels = [];
+      layers.forEach(layer => {
+        const rects = Array.from(layer.querySelectorAll('rect'));
+        Array.from(layer.querySelectorAll('text')).forEach(text => {
+          resetTransform(text);
+          const bounds = text.getBBox();
+          const textBox = { x: bounds.x, y: bounds.y, width: bounds.width, height: bounds.height };
+          let background = null;
+          let bestOverlap = 0;
+          rects.forEach(rect => {
+            resetTransform(rect);
+            const rectBounds = rect.getBBox();
+            const overlapWidth = Math.max(0, Math.min(textBox.x + textBox.width, rectBounds.x + rectBounds.width) - Math.max(textBox.x, rectBounds.x));
+            const overlapHeight = Math.max(0, Math.min(textBox.y + textBox.height, rectBounds.y + rectBounds.height) - Math.max(textBox.y, rectBounds.y));
+            const overlap = overlapWidth * overlapHeight;
+            const textArea = Math.max(1, textBox.width * textBox.height);
+            if (overlap / textArea > bestOverlap && overlap / textArea >= 0.6) {
+              background = rect;
+              bestOverlap = overlap / textArea;
+            }
+          });
+          labels.push({
+            text,
+            layer,
+            background,
+            original: textBox,
+            box: { x: textBox.x - 2, y: textBox.y - 2, width: textBox.width + 4, height: textBox.height + 4 },
+            lineConflicts: 0,
+            labelConflicts: 0,
+            moved: false
+          });
+        });
+      });
+
+      const lineSegments = [];
+      const addSegment = (x1, y1, x2, y2) => {
+        if ([x1, y1, x2, y2].every(Number.isFinite)) lineSegments.push([x1, y1, x2, y2]);
+      };
+      layers.forEach(layer => {
+        layer.querySelectorAll('line').forEach(line => addSegment(
+          Number(line.getAttribute('x1')), Number(line.getAttribute('y1')),
+          Number(line.getAttribute('x2')), Number(line.getAttribute('y2'))
+        ));
+        layer.querySelectorAll('polyline, polygon').forEach(shape => {
+          const points = (shape.getAttribute('points') || '').trim().split(/\s+/)
+            .map(point => point.split(',').map(Number))
+            .filter(point => point.length === 2 && point.every(Number.isFinite));
+          for (let index = 0; index + 1 < points.length; index += 1) {
+            addSegment(points[index][0], points[index][1], points[index + 1][0], points[index + 1][1]);
+          }
+          if (shape.tagName.toLowerCase() === 'polygon' && points.length > 2) {
+            addSegment(points[points.length - 1][0], points[points.length - 1][1], points[0][0], points[0][1]);
+          }
+        });
+        layer.querySelectorAll('path').forEach(path => {
+          const length = path.getTotalLength();
+          const samples = Math.max(1, Math.min(80, Math.ceil(length / 8)));
+          let previous = path.getPointAtLength(0);
+          for (let index = 1; index <= samples; index += 1) {
+            const point = path.getPointAtLength(length * index / samples);
+            addSegment(previous.x, previous.y, point.x, point.y);
+            previous = point;
+          }
+        });
+      });
+
+      const intersectsSegment = (box, [x1, y1, x2, y2]) => {
+        let low = 0;
+        let high = 1;
+        const dx = x2 - x1;
+        const dy = y2 - y1;
+        for (const [p, q] of [
+          [-dx, x1 - box.x],
+          [dx, box.x + box.width - x1],
+          [-dy, y1 - box.y],
+          [dy, box.y + box.height - y1]
+        ]) {
+          if (p === 0) {
+            if (q < 0) return false;
+            continue;
+          }
+          const t = q / p;
+          if (p < 0) {
+            if (t > high) return false;
+            low = Math.max(low, t);
+          } else {
+            if (t < low) return false;
+            high = Math.min(high, t);
+          }
+        }
+        return true;
+      };
+      const boxesOverlap = (first, second) =>
+        first.x < second.x + second.width && first.x + first.width > second.x &&
+        first.y < second.y + second.height && first.y + first.height > second.y;
+
+      labels.forEach(label => {
+        label.lineConflicts = lineSegments.filter(segment => intersectsSegment(label.box, segment)).length;
+      });
+      for (let first = 0; first < labels.length; first += 1) {
+        for (let second = first + 1; second < labels.length; second += 1) {
+          if (boxesOverlap(labels[first].box, labels[second].box)) {
+            labels[first].labelConflicts += 1;
+            labels[second].labelConflicts += 1;
+          }
+        }
+      }
+
+      const movable = labels
+        .filter(label => label.lineConflicts || label.labelConflicts)
+        .sort((first, second) =>
+          (second.lineConflicts * 2 + second.labelConflicts) -
+          (first.lineConflicts * 2 + first.labelConflicts)
+        );
+      const fixed = labels.filter(label => !label.lineConflicts && !label.labelConflicts);
+      const placed = [];
+      const angles = [0, 45, 90, 135, 180, 225, 270, 315, 22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5];
+
+      movable.forEach(label => {
+        let placement = null;
+        for (let distance = 6; distance <= 120 && !placement; distance += 6) {
+          for (const angle of angles) {
+            const radians = angle * Math.PI / 180;
+            const dx = Math.cos(radians) * distance;
+            const dy = Math.sin(radians) * distance;
+            const candidate = {
+              x: label.box.x + dx,
+              y: label.box.y + dy,
+              width: label.box.width,
+              height: label.box.height
+            };
+            if (candidate.x < 8 || candidate.y < 8 ||
+                candidate.x + candidate.width > 792 || candidate.y + candidate.height > 592) continue;
+            if (lineSegments.some(segment => intersectsSegment(candidate, segment))) continue;
+            if (fixed.some(other => boxesOverlap(candidate, other.box)) ||
+                placed.some(other => boxesOverlap(candidate, other.box))) continue;
+            placement = { dx, dy, box: candidate };
+            break;
+          }
+        }
+
+        if (!placement) {
+          console.warn(`Не вдалося знайти вільне місце для підпису «${label.text.textContent.trim()}» у ${label.layer.id || 'осі'}.`);
+          placed.push(label);
+          return;
+        }
+
+        const applyOffset = element => {
+          const original = element.getAttribute('data-original-label-transform');
+          const translation = `translate(${placement.dx} ${placement.dy})`;
+          element.setAttribute('transform', original !== '__none__' ? `${translation} ${original}` : translation);
+        };
+        applyOffset(label.text);
+        if (label.background) applyOffset(label.background);
+        label.box = placement.box;
+        label.moved = true;
+        placed.push(label);
+      });
     }
 
     function updateNotationsTable(v) {

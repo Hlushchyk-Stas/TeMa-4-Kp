@@ -80,35 +80,13 @@
             </div>
             <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
               <span class="font-bold text-emerald-300 block mb-1 text-sm">2. Пряма OK (1 б.)</span>
-              <span class="text-slate-200 text-xs leading-snug">Визначення довжини (Н.В.) та кута α (непарні) або β (парні) методом прямокутного трикутника.</span>
+              <span class="text-slate-200 text-xs leading-snug">Визначення довжини (Н.В.) та кута α або β методом прямокутного трикутника.</span>
             </div>
             <div class="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
               <span class="font-bold text-sky-300 block mb-1 text-sm">Разом за роботу: 6 балів</span>
               <span class="text-slate-200 text-xs leading-snug">Повна графічна побудова на епюрі Монжа без числових вимірів.</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Catalog Controls & Filters -->
-      <div class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex flex-wrap items-center justify-between gap-3">
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Фільтр варіантів:</span>
-          <div class="flex items-center gap-1.5 flex-wrap">
-            <button class="catalog-filter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white transition-colors" data-filter="all">
-              Усі варіанти
-            </button>
-            <button class="catalog-filter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-filter="odd">
-              Непарні (Кут α)
-            </button>
-            <button class="catalog-filter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors" data-filter="even">
-              Парні (Кут β)
-            </button>
-          </div>
-        </div>
-
-        <div class="text-xs text-slate-500 font-medium">
-          Показано: <span id="catalog-count-badge" class="font-bold text-slate-800">29</span> варіанти
         </div>
       </div>
 
@@ -140,7 +118,7 @@
               Сліди площини f₂ / h₁
             </h2>
             <p class="text-xs text-slate-500" id="active-variant-subtitle">
-              Непарний варіант — шуканий кут α до горизонтальної площини П₁
+              Шуканий кут α до горизонтальної площини П₁
             </p>
           </div>
         </div>
@@ -149,10 +127,10 @@
         <div class="flex items-center gap-1.5 bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs">
           <span class="text-slate-500 px-1 font-medium">Шуканий кут:</span>
           <button id="btn-mode-odd" class="px-2.5 py-1 rounded-md font-semibold transition-all bg-white text-blue-700 shadow-sm border border-slate-200">
-            Непарні (Кут α)
+            Кут α
           </button>
           <button id="btn-mode-even" class="px-2.5 py-1 rounded-md font-medium text-slate-600 hover:text-slate-900 transition-all">
-            Парні (Кут β)
+            Кут β
           </button>
         </div>
       </div>
@@ -262,11 +240,11 @@
                 </label>
                 <label class="inline-flex items-center gap-1 cursor-pointer bg-slate-50 hover:bg-slate-100 px-2 py-1 rounded border border-slate-200">
                   <input type="checkbox" id="chk-alpha" class="rounded text-red-600" checked>
-                  <span id="label-chk-alpha">Кут α (непарні)</span>
+                  <span id="label-chk-alpha">Кут α</span>
                 </label>
                 <label class="inline-flex items-center gap-1 cursor-pointer bg-slate-50 hover:bg-slate-100 px-2 py-1 rounded border border-slate-200 hidden" id="wrapper-chk-beta">
                   <input type="checkbox" id="chk-beta" class="rounded text-purple-600">
-                  <span id="label-chk-beta">Кут β (парні)</span>
+                  <span id="label-chk-beta">Кут β</span>
                 </label>
               </div>
 
@@ -335,8 +313,8 @@
               За умовою задачі будується прямокутний трикутник на одній із площин проєкцій:
             </p>
             <ul class="list-disc pl-4 space-y-1" id="theory-summary-list">
-              <li><strong>Кут α (непарні вар.):</strong> будується на П₁ (катет ΔZ, гіпотенуза Н.В.).</li>
-              <li><strong>Кут β (парні вар.):</strong> будується на П₂ (катет ΔY, гіпотенуза Н.В.).</li>
+              <li><strong>Кут α:</strong> будується на П₁ (катет ΔZ, гіпотенуза Н.В.).</li>
+              <li><strong>Кут β:</strong> будується на П₂ (катет ΔY, гіпотенуза Н.В.).</li>
             </ul>
           </div>
 
@@ -465,7 +443,7 @@
         id: 19,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h; пряма m — фронталь (m₁ ∥ Ox). Непарний варіант — шуканий кут α на П₁.",
+        description: "Площина f ∩ h; пряма m — фронталь (m₁ ∥ Ox). Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[19]
       },
@@ -489,7 +467,7 @@
         id: 16,
         isOdd: false,
         planeType: "Сліди f₂* та h₁* (розкрив вправо)",
-        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ ∥ f₂*, m₁ ∥ h₁*). Парний варіант — шуканий кут β на П₂.",
+        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ ∥ f₂*, m₁ ∥ h₁*). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -497,7 +475,7 @@
         id: 17,
         isOdd: true,
         planeType: "Трикутник ABC",
-        description: "Трикутник ABC (B₂C₂ ∥ Ox, A₁C₁ ∥ Ox); пряма m (m₂ ∥ Ox, m₁ ∥ Ox). Непарний варіант — шуканий кут α на П₁.",
+        description: "Трикутник ABC (B₂C₂ ∥ Ox, A₁C₁ ∥ Ox); пряма m (m₂ ∥ Ox, m₁ ∥ Ox). Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -521,7 +499,7 @@
         id: 21,
         isOdd: true,
         planeType: "Сліди f₂* та h₁* (схід праворуч)",
-        description: "Сліди f₂* і h₁* сходяться на осі X (вершина праворуч, розкрив ліворуч); пряма m загального положення. Непарний варіант — шуканий кут α на П₁.",
+        description: "Сліди f₂* і h₁* сходяться на осі X (вершина праворуч, розкрив ліворуч); пряма m загального положення. Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -529,7 +507,7 @@
         id: 22,
         isOdd: false,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h; пряма m (m₂ ∥ f₂ та m₁ ∥ h₁). Парний варіант — шуканий кут β на П₂.",
+        description: "Площина f ∩ h; пряма m (m₂ ∥ f₂ та m₁ ∥ h₁). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -537,7 +515,7 @@
         id: 23,
         isOdd: true,
         planeType: "Трикутник ABC",
-        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Непарний варіант — шуканий кут α на П₁.",
+        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: ""
       },
@@ -545,7 +523,7 @@
         id: 24,
         isOdd: false,
         planeType: "Паралельні фронталі b ∥ c",
-        description: "Дві паралельні фронталі b ∥ c (b₁ ∥ c₁ ∥ Ox); пряма m загального положення. Парний варіант — шуканий кут β на П₂.",
+        description: "Дві паралельні фронталі b ∥ c (b₁ ∥ c₁ ∥ Ox); пряма m загального положення. Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: ""
       },
@@ -553,7 +531,7 @@
         id: 25,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m — горизонталь (m₂ ∥ Ox, m₁ вгору-вправо). Непарний варіант — шуканий кут α на П₁.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m — горизонталь (m₂ ∥ Ox, m₁ вгору-вправо). Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[25]
       },
@@ -561,7 +539,7 @@
         id: 26,
         isOdd: false,
         planeType: "Сліди f₂* та h₁* (розкрив вправо)",
-        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ вниз-вправо, m₁ вгору-вправо). Парний варіант — шуканий кут β на П₂.",
+        description: "Сліди f₂* і h₁* сходяться на осі X; пряма m (m₂ вниз-вправо, m₁ вгору-вправо). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[26]
       },
@@ -569,7 +547,7 @@
         id: 27,
         isOdd: true,
         planeType: "Трикутник ABC",
-        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Непарний варіант — шуканий кут α на П₁.",
+        description: "Площина задана трикутником ABC загального положення; пряма m загального положення. Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[27]
       },
@@ -577,7 +555,7 @@
         id: 28,
         isOdd: false,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ з малим нахилом перетинає f₂, m₁ вгору-вправо). Парний варіант — шуканий кут β на П₂.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ з малим нахилом перетинає f₂, m₁ вгору-вправо). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[28]
       },
@@ -585,7 +563,7 @@
         id: 29,
         isOdd: true,
         planeType: "Перетин фронталі f та горизонталі h (вершина справа)",
-        description: "Площина f ∩ h (f₂ вгору-вліво, h₂ ∥ Ox вліво; f₁ ∥ Ox вліво, h₁ вниз-вліво); пряма m загального положення. Непарний варіант — шуканий кут α на П₁.",
+        description: "Площина f ∩ h (f₂ вгору-вліво, h₂ ∥ Ox вліво; f₁ ∥ Ox вліво, h₁ вниз-вліво); пряма m загального положення. Шуканий кут α на П₁.",
         angleType: "α",
         b64Img: b64Data[29]
       },
@@ -593,7 +571,7 @@
         id: 30,
         isOdd: false,
         planeType: "Перетин фронталі f та горизонталі h",
-        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ ∥ f₂, m₁ перетинає h₁). Парний варіант — шуканий кут β на П₂.",
+        description: "Площина f ∩ h (f₂ вгору-вправо, h₂ ∥ Ox; f₁ ∥ Ox, h₁ вниз-вправо); пряма m (m₂ ∥ f₂, m₁ перетинає h₁). Шуканий кут β на П₂.",
         angleType: "β",
         b64Img: b64Data[30]
       }
@@ -606,14 +584,12 @@
     const maxSteps = 5;
     let autoInterval = null;
     let currentVariantMode = 'odd'; // 'odd' (alpha) or 'even' (beta)
-    let currentCatalogFilter = 'all';
 
     // DOM References
     const viewCatalog = document.getElementById('view-catalog');
     const viewSolver = document.getElementById('view-solver');
     const searchInput = document.getElementById('search-input');
     const variantsGrid = document.getElementById('variants-grid');
-    const catalogCountBadge = document.getElementById('catalog-count-badge');
     const btnNavCatalog = document.getElementById('btn-nav-catalog');
     const btnBackToCatalog = document.getElementById('btn-back-to-catalog');
     const btnHeaderHome = document.getElementById('btn-header-home');
@@ -900,25 +876,19 @@
     }
 
     // Render Catalog Grid
-    function renderCatalog(filter = 'all', query = '') {
+    function renderCatalog(query = '') {
       if (!variantsGrid) return;
       variantsGrid.innerHTML = '';
       const q = query.trim().toLowerCase();
-      let visibleCount = 0;
 
       Object.values(variantsData).forEach(v => {
-        if (filter === 'odd' && !v.isOdd) return;
-        if (filter === 'even' && v.isOdd) return;
-
         if (q) {
           const matchId = String(v.id) === q || `варіант ${v.id}`.includes(q) || `вар ${v.id}`.includes(q);
           const matchText = v.planeType.toLowerCase().includes(q) || v.description.toLowerCase().includes(q);
-          const matchOdd = (v.isOdd && 'непарний'.includes(q)) || (!v.isOdd && 'парний'.includes(q));
           const matchAngle = (v.isOdd && (q === 'α' || q === 'альфа')) || (!v.isOdd && (q === 'β' || q === 'бета'));
-          if (!matchId && !matchText && !matchOdd && !matchAngle) return;
+          if (!matchId && !matchText && !matchAngle) return;
         }
 
-        visibleCount++;
         const card = document.createElement('div');
         card.className = "variant-card p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between";
 
@@ -962,9 +932,6 @@
         variantsGrid.appendChild(card);
       });
 
-      if (catalogCountBadge) {
-        catalogCountBadge.textContent = visibleCount;
-      }
     }
 
     // Select Variant and prepare solver
@@ -977,7 +944,7 @@
         v.isOdd ? 'bg-amber-100 text-amber-900' : 'bg-purple-100 text-purple-900'
       }`;
       activeTitle.textContent = `Площина: ${v.planeType}`;
-      activeSubtitle.textContent = `${v.isOdd ? 'Непарний варіант — шуканий кут α до П₁' : 'Парний варіант — шуканий кут β до П₂'}`;
+      activeSubtitle.textContent = `${v.isOdd ? 'Шуканий кут α до П₁' : 'Шуканий кут β до П₂'}`;
 
       setVariantMode(v.isOdd ? 'odd' : 'even', false);
       renderVariantSvg(v.id);
@@ -2460,11 +2427,11 @@
       }
       if (mode === 'odd') {
         return {
-          title: "5. Н.В. та кут α (непарний варіант)",
+          title: "5. Н.В. та кут α",
           heading: "Крок 5: Графічна побудова кута α на П₁",
           html: `
             <div class="p-2.5 rounded bg-amber-50 border border-amber-300">
-              <span class="font-bold text-amber-950 block text-xs uppercase tracking-wide">Непарний варіант — графічна побудова кута α (1 бал):</span>
+              <span class="font-bold text-amber-950 block text-xs uppercase tracking-wide">Графічна побудова кута α (1 бал):</span>
               <p class="text-xs text-amber-900 mt-1 leading-relaxed">
                 1. Базовий катет — горизонтальна проєкція <strong>p₁</strong> (відрізок [OK₁]).<br/>
                 2. З точки K₁ перпендикулярно до p₁ відкладаємо катет <strong>ΔZ</strong> (висота K₂ над віссю X) → вершина <strong>K₀</strong>.<br/>
@@ -2476,11 +2443,11 @@
         };
       } else {
         return {
-          title: "5. Н.В. та кут β (парний варіант)",
+          title: "5. Н.В. та кут β",
           heading: "Крок 5: Графічна побудова кута β на П₂",
           html: `
             <div class="p-2.5 rounded bg-purple-50 border border-purple-300">
-              <span class="font-bold text-purple-950 block text-xs uppercase tracking-wide">Парний варіант — графічна побудова кута β (1 бал):</span>
+              <span class="font-bold text-purple-950 block text-xs uppercase tracking-wide">Графічна побудова кута β (1 бал):</span>
               <p class="text-xs text-purple-900 mt-1 leading-relaxed">
                 1. Базовий катет — фронтальна проєкція <strong>p₂</strong> (відрізок [OK₂]).<br/>
                 2. З точки K₂ перпендикулярно до p₂ відкладаємо катет <strong>ΔY</strong> (глибина K₁ від осі X) → вершина <strong>K₀*</strong>.<br/>
@@ -2591,12 +2558,12 @@
           <td class="py-2 px-2 text-red-800">Гіпотенуза прямокутного трикутника (1 б.)</td>
         </tr>
         <tr id="row-angle-alpha" class="${currentVariantMode === 'odd' ? 'bg-amber-100/70 border-l-4 border-amber-500 font-bold' : 'opacity-40'}">
-          <td class="py-1.5 px-2 text-amber-950">Кут α (непарні)</td>
+          <td class="py-1.5 px-2 text-amber-950">Кут α</td>
           <td class="py-1.5 px-2 font-mono text-amber-900">α</td>
           <td class="py-1.5 px-2 text-amber-950">Кут нахилу до П₁ (катет ΔZ)</td>
         </tr>
         <tr id="row-angle-beta" class="${currentVariantMode === 'even' ? 'bg-purple-100/70 border-l-4 border-purple-500 font-bold opacity-100' : 'opacity-40'}">
-          <td class="py-1.5 px-2 text-purple-900">Кут β (парні)</td>
+          <td class="py-1.5 px-2 text-purple-900">Кут β</td>
           <td class="py-1.5 px-2 font-mono text-purple-800">β</td>
           <td class="py-1.5 px-2 text-purple-900">Кут нахилу до П₂ (катет ΔY)</td>
         </tr>
@@ -2613,7 +2580,7 @@
         chkAlpha.parentElement.classList.remove('hidden');
         btnStep5.textContent = "5. Н.В. і кути";
 
-        theorySummaryText.innerHTML = "За умовою задачі (непарні варіанти) будується <strong>кут α</strong> нахилу до горизонтальної площини П₁:";
+        theorySummaryText.innerHTML = "Будується <strong>кут α</strong> нахилу до горизонтальної площини П₁:";
         theorySummaryList.innerHTML = `
           <li><strong>Базовий катет:</strong> горизонтальна проєкція <span class="font-mono text-emerald-700 font-semibold">p₁</span> (відрізок [OK₁]).</li>
           <li><strong>Другий катет:</strong> перпендикуляр <span class="font-mono text-orange-700 font-semibold">ΔZ</span> (висота K₂ над віссю X) до вершини K₀.</li>
@@ -2628,7 +2595,7 @@
         chkAlpha.parentElement.classList.add('hidden');
         btnStep5.textContent = "5. Н.В. і кути";
 
-        theorySummaryText.innerHTML = "Для парних варіантів будується <strong>кут β</strong> нахилу до фронтальної площини П₂:";
+        theorySummaryText.innerHTML = "Будується <strong>кут β</strong> нахилу до фронтальної площини П₂:";
         theorySummaryList.innerHTML = `
           <li><strong>Базовий катет:</strong> фронтальна проєкція <span class="font-mono text-emerald-700 font-semibold">p₂</span> (відрізок [OK₂]).</li>
           <li><strong>Другий катет:</strong> перпендикуляр <span class="font-mono text-purple-700 font-semibold">ΔY</span> (глибина K₁ від осі X) до вершини K₀*.</li>
@@ -2647,21 +2614,9 @@
     btnBackToCatalog.addEventListener('click', () => switchView('catalog'));
     btnHeaderHome.addEventListener('click', () => switchView('catalog'));
 
-    // Catalog Filter Buttons
-    document.querySelectorAll('.catalog-filter-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.catalog-filter-btn').forEach(b => {
-          b.className = "catalog-filter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors";
-        });
-        e.target.className = "catalog-filter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 text-white transition-colors";
-        currentCatalogFilter = e.target.dataset.filter;
-        renderCatalog(currentCatalogFilter, searchInput.value);
-      });
-    });
-
     // Search Input Event
     searchInput.addEventListener('input', (e) => {
-      renderCatalog(currentCatalogFilter, e.target.value);
+      renderCatalog(e.target.value);
     });
 
     searchInput.addEventListener('keydown', (e) => {
@@ -2756,7 +2711,7 @@
 
     // Initial load: START ON CATALOG!
     selectVariant(1);
-    renderCatalog('all', '');
+    renderCatalog('');
     switchView('catalog');
   </script>
 </body>

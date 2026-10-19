@@ -2848,6 +2848,7 @@
       if (!gStep1) return;
 
       rebuildBetaConstruction(gStep5Beta);
+      rebuildAlphaAngle(gStep5Alpha);
 
       gStep1.style.opacity = (currentStep >= 1 && chkPlane.checked) ? "1" : "0";
       gStep2.style.opacity = (currentStep >= 2 && chkPts.checked) ? "1" : "0";
@@ -2865,6 +2866,59 @@
       }
 
       layoutVisibleSvgLabels();
+    }
+
+    function rebuildAlphaAngle(alphaGroup) {
+      if (!alphaGroup) return;
+
+      const p1 = document.querySelector('#step-4 line');
+      const axis = document.querySelector('#layer-axis line');
+      const k0 = Array.from(alphaGroup.querySelectorAll('circle')).find(circle =>
+        circle.getAttribute('fill') === '#ea580c'
+      );
+      const arc = alphaGroup.querySelector('path');
+      const alphaLabel = Array.from(alphaGroup.querySelectorAll('text')).find(text =>
+        text.textContent.trim() === 'α'
+      );
+      const labelBackground = alphaLabel?.previousElementSibling;
+      if (!p1 || !axis || !k0 || !arc || !alphaLabel || labelBackground?.tagName.toLowerCase() !== 'rect') {
+        throw new Error('Не вдалося побудувати кут α: відсутні проєкція p₁, точка K₀ або позначення кута.');
+      }
+
+      const originX = Number(axis.getAttribute('x1'));
+      const originY = Number(axis.getAttribute('y1'));
+      const baseX = Number(p1.getAttribute('x2')) - originX;
+      const baseY = Number(p1.getAttribute('y2')) - originY;
+      const hypotenuseX = Number(k0.getAttribute('cx')) - originX;
+      const hypotenuseY = Number(k0.getAttribute('cy')) - originY;
+      if (![originX, originY, baseX, baseY, hypotenuseX, hypotenuseY].every(Number.isFinite) ||
+          Math.hypot(baseX, baseY) === 0 || Math.hypot(hypotenuseX, hypotenuseY) === 0) {
+        throw new Error('Не вдалося побудувати кут α: некоректні проєкції p₁ або OK₀.');
+      }
+
+      const baseAngle = Math.atan2(baseY, baseX);
+      const hypotenuseAngle = Math.atan2(hypotenuseY, hypotenuseX);
+      let angleDelta = hypotenuseAngle - baseAngle;
+      while (angleDelta > Math.PI) angleDelta -= 2 * Math.PI;
+      while (angleDelta < -Math.PI) angleDelta += 2 * Math.PI;
+
+      const radius = 64;
+      const format = value => value.toFixed(1);
+      const arcStartX = originX + Math.cos(baseAngle) * radius;
+      const arcStartY = originY + Math.sin(baseAngle) * radius;
+      const arcEndX = originX + Math.cos(hypotenuseAngle) * radius;
+      const arcEndY = originY + Math.sin(hypotenuseAngle) * radius;
+      const labelAngle = baseAngle + angleDelta / 2;
+      const labelX = originX + Math.cos(labelAngle) * (radius + 16);
+      const labelY = originY + Math.sin(labelAngle) * (radius + 16);
+
+      arc.setAttribute('d',
+        `M ${format(arcStartX)} ${format(arcStartY)} A ${radius} ${radius} 0 0 ${angleDelta > 0 ? 1 : 0} ${format(arcEndX)} ${format(arcEndY)}`
+      );
+      labelBackground.setAttribute('x', format(labelX - 14));
+      labelBackground.setAttribute('y', format(labelY - 11));
+      alphaLabel.setAttribute('x', format(labelX));
+      alphaLabel.setAttribute('y', format(labelY + 5));
     }
 
     function rebuildBetaConstruction(betaGroup) {
